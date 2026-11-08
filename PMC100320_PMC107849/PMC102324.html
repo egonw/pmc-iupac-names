@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PMC102324</title>
+<style>
+:root { --bg: #ffffff; --fg: #1f2328; --tag: #1a5fb4; --pi: #8a6d00; --line: #d0d7de; --link: #0b57d0; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14171a; --fg: #d8dee4; --tag: #7cb7ff; --pi: #d4b44a; --line: #30363d; --link: #7cb7ff; }
+}
+body { background: var(--bg); color: var(--fg); margin: 0; font: 14px/1.5 system-ui, sans-serif; }
+header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 16px; }
+h1 { font-size: 16px; margin: 0 0 4px; display: flex; gap: 16px; align-items: baseline; }
+h1 a { font-size: 13px; font-weight: normal; color: var(--link); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; }
+.legend span { padding: 0 8px; border-radius: 3px; white-space: nowrap; }
+main { padding: 12px 16px 16px; }
+pre { margin: 0; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word; }
+.t { color: var(--tag); }
+.pi { color: var(--pi); }
+pre .g-new, pre .g-old, pre .smiles, pre .bad, pre .none { border-radius: 2px; }
+
+.g-new  { background: #1b7f3b; color: #fff; }
+.g-old  { background: #a8e6b8; color: #0b2a14; }
+.smiles { background: #ffe66d; color: #3a3000; }
+.bad    { background: #d93b3b; color: #fff; }
+.none   { background: #cfd4da; color: #1f2328; }
+@media (prefers-color-scheme: dark) {
+  .none { background: #4b5159; color: #e6edf3; }
+}
+
+#tip { position: fixed; z-index: 20; display: none; width: 300px; padding: 8px; border-radius: 6px;
+  background: #fff; color: #1f2328; border: 1px solid #8c959f; box-shadow: 0 4px 16px rgba(0,0,0,.3); pointer-events: none; }
+#tip img { display: block; width: 300px; height: 300px; object-fit: contain; background: #fff; }
+#tip .msg { display: none; width: 300px; height: 300px; align-items: center; justify-content: center; text-align: center; color: #6e7781; }
+#tip.err img { display: none; }
+#tip.err .msg { display: flex; }
+#tip .cap { margin-top: 6px; font: 12px/1.3 ui-monospace, Menlo, Consolas, monospace; word-break: break-all; }
+[data-smi] { cursor: help; }
+</style>
+</head>
+<body>
+<header>
+<h1>PMC102324 <a href="../index.html">&larr; index</a></h1>
+<div class="legend">
+<span class="g-new" title="valid IUPAC name, first time seen">IUPAC name (new) <b>20</b></span>
+<span class="g-old" title="valid IUPAC name, seen before">IUPAC name (cached) <b>41</b></span>
+<span class="smiles" title="the text itself is a valid SMILES">valid SMILES <b>2</b></span>
+<span class="bad" title="OPSIN gave a SMILES that CDK cannot read">invalid SMILES <b>0</b></span>
+<span class="none" title="Oscar entity that OPSIN could not convert to a SMILES">not converted <b>287</b></span>
+</div>
+</header>
+<main>
+<pre><span class="t">&lt;article article-type=&quot;research-article&quot; xml:lang=&quot;EN&quot; dtd-version=&quot;1.4&quot;&gt;</span>
+  <span class="t">&lt;front&gt;</span>
+    <span class="t">&lt;journal-meta&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;nlm-ta&quot;&gt;</span>BMC Ecol<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;pmc-domain-id&quot;&gt;</span>25<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;pmc-domain&quot;&gt;</span>bmceco<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;nlm-id&quot;&gt;</span>101088674<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-title-group&gt;</span>
+        <span class="t">&lt;journal-title&gt;</span>BMC Ecology<span class="t">&lt;/journal-title&gt;</span>
+      <span class="t">&lt;/journal-title-group&gt;</span>
+      <span class="t">&lt;issn pub-type=&quot;epub&quot;&gt;</span>1472-6785<span class="t">&lt;/issn&gt;</span>
+      <span class="pi">&lt;?publisher_abbrev csg?&gt;</span>
+      <span class="t">&lt;publisher&gt;</span>
+        <span class="t">&lt;publisher-name&gt;</span>BMC<span class="t">&lt;/publisher-name&gt;</span>
+      <span class="t">&lt;/publisher&gt;</span>
+    <span class="t">&lt;/journal-meta&gt;</span>
+    <span class="t">&lt;article-meta&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcid&quot;&gt;</span>PMC102324<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcid-ver&quot;&gt;</span>PMC102324.1<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcaid&quot;&gt;</span>102324<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcaiid&quot;&gt;</span>102324<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmid&quot;&gt;</span>11914158<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;doi&quot;&gt;</span>10.1186/1472-6785-2-5<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;publisher-id&quot;&gt;</span>1472-6785-2-5<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-version article-version-type=&quot;pmc-version&quot;&gt;</span>1<span class="t">&lt;/article-version&gt;</span>
+      <span class="t">&lt;article-categories&gt;</span>
+        <span class="t">&lt;subj-group subj-group-type=&quot;heading&quot;&gt;</span>
+          <span class="t">&lt;subject&gt;</span>Research Article<span class="t">&lt;/subject&gt;</span>
+        <span class="t">&lt;/subj-group&gt;</span>
+      <span class="t">&lt;/article-categories&gt;</span>
+      <span class="t">&lt;title-group&gt;</span>
+        <span class="t">&lt;article-title&gt;</span>Glucosinolate breakdown products as insect fumigants and their effect on carbon dioxide emission of insects<span class="t">&lt;/article-title&gt;</span>
+      <span class="t">&lt;/title-group&gt;</span>
+      <span class="t">&lt;contrib-group&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A1&quot; corresp=&quot;yes&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Tsao<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;R&quot;&gt;</span>Rong<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>caor@em.agr.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A2&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Peterson<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;CJ&quot;&gt;</span>Chris J<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>cjpeterson@fs.fed.us<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A3&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Coats<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;JR&quot;&gt;</span>Joel R<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>jcoats@iastate.edu<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+      <span class="t">&lt;/contrib-group&gt;</span>
+      <span class="t">&lt;aff id=&quot;I1&quot;&gt;</span><span class="t">&lt;label&gt;</span>1<span class="t">&lt;/label&gt;</span>Food Research Program, Agriculture &amp;amp; Agri-Food Canada 93 Stone Road, Ontario NIG 5C9 Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I2&quot;&gt;</span><span class="t">&lt;label&gt;</span>2<span class="t">&lt;/label&gt;</span>Wood Products Insect Research Unit, USDA Forest Service, 101-A G.T. Thames Drive, Starkville, MS 39759 USA<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I3&quot;&gt;</span><span class="t">&lt;label&gt;</span>3<span class="t">&lt;/label&gt;</span>Pesticide Toxicology Laboratory, Department of Entomology, Iowa State University, Ames, 1A 50011-3140 USA<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;pub-date pub-type=&quot;collection&quot;&gt;</span>
+        <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+      <span class="t">&lt;/pub-date&gt;</span>
+      <span class="t">&lt;pub-date pub-type=&quot;epub&quot;&gt;</span>
+        <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+        <span class="t">&lt;month&gt;</span>3<span class="t">&lt;/month&gt;</span>
+        <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+      <span class="t">&lt;/pub-date&gt;</span>
+      <span class="t">&lt;volume&gt;</span>2<span class="t">&lt;/volume&gt;</span>
+      <span class="t">&lt;issue-id pub-id-type=&quot;pmc-issue-id&quot;&gt;</span>1830<span class="t">&lt;/issue-id&gt;</span>
+      <span class="t">&lt;fpage&gt;</span>5<span class="t">&lt;/fpage&gt;</span>
+      <span class="t">&lt;lpage&gt;</span>5<span class="t">&lt;/lpage&gt;</span>
+      <span class="t">&lt;ext-link xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;uri&quot; xlink:href=&quot;http://www.biomedcentral.com/1472-6785/2/5&quot;/&gt;</span>
+      <span class="t">&lt;history&gt;</span>
+        <span class="t">&lt;date date-type=&quot;received&quot;&gt;</span>
+          <span class="t">&lt;day&gt;</span>29<span class="t">&lt;/day&gt;</span>
+          <span class="t">&lt;month&gt;</span>10<span class="t">&lt;/month&gt;</span>
+          <span class="t">&lt;year&gt;</span>2001<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;date date-type=&quot;accepted&quot;&gt;</span>
+          <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+          <span class="t">&lt;month&gt;</span>3<span class="t">&lt;/month&gt;</span>
+          <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/date&gt;</span>
+      <span class="t">&lt;/history&gt;</span>
+      <span class="t">&lt;pub-history&gt;</span>
+        <span class="t">&lt;event event-type=&quot;pmc-release&quot;&gt;</span>
+          <span class="t">&lt;date&gt;</span>
+            <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+            <span class="t">&lt;month&gt;</span>03<span class="t">&lt;/month&gt;</span>
+            <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;/event&gt;</span>
+        <span class="t">&lt;event event-type=&quot;pmc-live&quot;&gt;</span>
+          <span class="t">&lt;date&gt;</span>
+            <span class="t">&lt;day&gt;</span>19<span class="t">&lt;/day&gt;</span>
+            <span class="t">&lt;month&gt;</span>04<span class="t">&lt;/month&gt;</span>
+            <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;/event&gt;</span>
+        <span class="t">&lt;event event-type=&quot;pmc-last-change&quot;&gt;</span>
+          <span class="t">&lt;date iso-8601-date=&quot;2026-09-15 22:25:19.263&quot;&gt;</span>
+            <span class="t">&lt;day&gt;</span>15<span class="t">&lt;/day&gt;</span>
+            <span class="t">&lt;month&gt;</span>09<span class="t">&lt;/month&gt;</span>
+            <span class="t">&lt;year&gt;</span>2026<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;/event&gt;</span>
+      <span class="t">&lt;/pub-history&gt;</span>
+      <span class="t">&lt;permissions&gt;</span>
+        <span class="t">&lt;copyright-statement&gt;</span>Copyright Â© 2002 Tsao et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.<span class="t">&lt;/copyright-statement&gt;</span>
+        <span class="t">&lt;copyright-year&gt;</span>2002<span class="t">&lt;/copyright-year&gt;</span>
+        <span class="t">&lt;copyright-holder&gt;</span>Tsao et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.<span class="t">&lt;/copyright-holder&gt;</span>
+      <span class="t">&lt;/permissions&gt;</span>
+      <span class="t">&lt;self-uri xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; content-type=&quot;pmc-pdf&quot; xlink:href=&quot;1472-6785-2-5.pdf&quot;&gt;</span>
+        <span class="pi">&lt;?pdf-name 1472-6785-2-5.pdf?&gt;</span>
+        <span class="pi">&lt;?pdf-size 360891?&gt;</span>
+        <span class="pi">&lt;?pdf-md5 3fa43cf479af1c28027147954c8a8ed2?&gt;</span>
+        <span class="pi">&lt;?pdf-image-server-status NEVER_LOAD?&gt;</span>
+        <span class="pi">&lt;?pdf-cloudpmc-urn urn:app:aa0c/102324/3fa43cf479af/1472-6785-2-5.pdf?&gt;</span>
+      <span class="t">&lt;/self-uri&gt;</span>
+      <span class="t">&lt;abstract&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Background<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Glucosinolate</span> breakdown products are volatile, therefore good candidates for insect <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span>. However, although they are insecticidal, the mode of action of such <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">natural products</span> is not clear. We studied the insecticidal effect of these compounds as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span>, and monitored the production of <span class="g-old" data-smi="C(=O)=O" data-name="carbon dioxide">carbon dioxide</span> by the insects as a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">probe</span> to the understanding of their mode of action.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Results<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>The fumigation <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">24-</span>h <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span> against the house fly (<span class="t">&lt;italic&gt;</span>Musca domestica<span class="t">&lt;/italic&gt;</span> L.) of <span class="g-new" data-smi="C(C=C)SC#N" data-name="allyl thiocyanate">allyl thiocyanate</span>, <span class="g-new" data-smi="C(C=C)N=C=S" data-name="allyl isothiocyanate">allyl isothiocyanate</span>, <span class="g-new" data-smi="C(C=C)C#N" data-name="allyl cyanide">allyl cyanide</span>, and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">l-cyano-2-hydroxy-3-butene</span> was 0.1, 0.13, 3.66, and 6.2 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>, respectively; they were 0.55, 1.57, 2.8, and &amp;gt; 19.60 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>, respectively, against the lesser grain borer (<span class="t">&lt;italic&gt;</span>Rhyzopertha dominica<span class="t">&lt;/italic&gt;</span> Fabricius). The fumigation toxicity of some of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> products was very close to or better than that of the commercial insect <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> such as <span class="g-new" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span>: 0.08 and 1.3 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span> against <span class="t">&lt;italic&gt;</span>M. domestica<span class="t">&lt;/italic&gt;</span> and <span class="t">&lt;italic&gt;</span>R. dominica<span class="t">&lt;/italic&gt;</span>, respectively) and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">dichlorovos</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span>: &amp;lt; 0.02 and 0.29 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span> against <span class="t">&lt;italic&gt;</span>M. domestica<span class="t">&lt;/italic&gt;</span> and <span class="t">&lt;italic&gt;</span>R. dominica<span class="t">&lt;/italic&gt;</span>, respectively) in our laboratory tests. Significantly increased <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> expiration was found in insects exposed to the vapor of <span class="g-old" data-smi="C(C=C)N=C=S" data-name="allyl isothiocyanate">allyl isothiocyanate</span>, <span class="g-old" data-smi="C(C=C)SC#N" data-name="allyl thiocyanate">allyl thiocyanate</span> and <span class="g-new" data-smi="C(C=C)N=C=O" data-name="allyl isocyanate">allyl isocyanate</span>. <span class="g-new" data-smi="C(C=C)N=C=S" data-name="Allyl isothiocyanate">Allyl isothiocyanate</span> was also found to increase the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> expiration of the American cockroach (<span class="t">&lt;italic&gt;</span>Periplaneta americana<span class="t">&lt;/italic&gt;</span> L.).<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Conclusions<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Glucosinolate</span> breakdown products have potential as biodegradable and safe insect <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span>. They may act on the insect respiratory system in their mode of action.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;/abstract&gt;</span>
+      <span class="t">&lt;custom-meta-group&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-qastatus<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>0<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-live<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-embargo<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-released<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-open-access<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-olf<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-manuscript<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-legally-suppressed<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-has-pdf<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-has-supplement<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-pdf-only<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-suppress-copyright<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-is-real-version<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-is-scanned-article<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-preprint<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-in-epmc<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+      <span class="t">&lt;/custom-meta-group&gt;</span>
+    <span class="t">&lt;/article-meta&gt;</span>
+  <span class="t">&lt;/front&gt;</span>
+  <span class="t">&lt;body&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Background<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>Plants in the family Cruciferae, such as cabbage (<span class="t">&lt;italic&gt;</span>Brassica olerecea<span class="t">&lt;/italic&gt;</span>), mustard (<span class="t">&lt;italic&gt;</span>Sinapis alba<span class="t">&lt;/italic&gt;</span>) and crambe (<span class="t">&lt;italic&gt;</span>Crambe abyssinica<span class="t">&lt;/italic&gt;</span>) produce <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> which are <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">secondary metabolites</span> that can help plants defend themselves against phytophagous insects, fungi and other pests. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Glucosinolates</span> are <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">hydrolyzed</span> by <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">thioglucosidase</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">myrosinase</span>) enzymes to yield an <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">aglycone</span> which undergoes non-enzymatic rearrangements to produce organic <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">isothiocyanates</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">thiocyanates</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">nitriles</span> and other products [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>], although non-enzymatic thermal degradation of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> may produce chemical species identical to products of the enzymatic <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">hydrolysis</span> [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B4&quot;&gt;</span>4<span class="t">&lt;/xref&gt;</span>]. The chemical structures of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">hydrolysis</span> products (breakdown products) of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> vary depending on the precursors in different plant species, and different endogenous or exogenous factors such as pH and ferrous <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ions</span> [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B5&quot;&gt;</span>5<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B6&quot;&gt;</span>6<span class="t">&lt;/xref&gt;</span>]. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Glucosinolates</span> and their breakdown products have been the focus of many studies because of the possibility of using them as natural <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">pesticides</span> [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B7&quot;&gt;</span>7<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>]. However, it is considered that <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> themselves possess limited biological activity until they are <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">hydrolyzed</span> [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B9&quot;&gt;</span>9<span class="t">&lt;/xref&gt;</span>]. The breakdown products are generally relatively small <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">molecules</span> which make many of them volatile. Many of these volatiles have been shown to act as attractants for certain insects seeking <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">food</span> or egg-laying sites rather than direct insecticidal activity [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B10&quot;&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">10</span><span class="t">&lt;/xref&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-</span><span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B14&quot;&gt;</span>14<span class="t">&lt;/xref&gt;</span>]. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Allyl glucosinolate</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">sinigrin</span>) breaks down in soils to <span class="g-old" data-smi="C(C=C)N=C=S" data-name="allyl isothiocyanate">allyl isothiocyanate</span> and <span class="g-old" data-smi="C(C=C)C#N" data-name="allyl cyanide">allyl cyanide</span>, and these breakdown products and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span>-containing plant tissue have been suggested for use in controlling soil-borne plant pests [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B9&quot;&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">9</span><span class="t">&lt;/xref&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">,</span><span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B15&quot;&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">15</span><span class="t">&lt;/xref&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-</span><span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B19&quot;&gt;</span>19<span class="t">&lt;/xref&gt;</span>]. Despite the many efforts that have been devoted to exploring <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> and their breakdown products as naturally occurring <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">pesticides</span>, few products have been marketed commercially. <span class="g-new" data-smi="C(CCC)OCCOCCSC#N" data-name="2-(2-Butoxyethoxy)ethyl thiocyanate">2-(2-Butoxyethoxy)ethyl thiocyanate</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Lethane</span> 384<span class="t">&lt;sup&gt;</span>Â®<span class="t">&lt;/sup&gt;</span>) and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">isobornyl thiocyanoacetate</span> (Thanite<span class="t">&lt;sup&gt;</span>Â®<span class="t">&lt;/sup&gt;</span>) were marketed as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">insecticides</span>, and <span class="g-new" data-smi="CN=C=S" data-name="methylisothiocyanate">methylisothiocyanate</span> (Vorlex<span class="t">&lt;sup&gt;</span>Â®<span class="t">&lt;/sup&gt;</span>) as a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigant</span>, although their discovery may or may not have been directly related to <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span>. The <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">thiocyanates</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Lethane</span> 384 and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Thanite</span>) were discontinued by their manufacturers in 1984 [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B20&quot;&gt;</span>20<span class="t">&lt;/xref&gt;</span>] and <span class="g-old" data-smi="CN=C=S" data-name="methylisothiocyanate">methylisothiocyanate</span>, the closest relative of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products, was also banned in 1991 [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B21&quot;&gt;</span>21<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>Harvested crops including seeds, grains and cereals suffer a loss of at least 10% from insect pests during storage. Losses of 30% are common throughout large areas of the world [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B22&quot;&gt;</span>22<span class="t">&lt;/xref&gt;</span>]. Many chemical <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> such as <span class="g-new" data-smi="C(CBr)Br" data-name="ethylene dibromide">ethylene dibromide</span> and <span class="g-new" data-smi="CBr" data-name="methyl bromide">methyl bromide</span> that have been used to control these stored grain insects are being banned or facing phase-out. There are clearly needs for alternative <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span>.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>We have reported the insecticidal activity of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> in crambe in our previous study, and found that <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">allyl</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">3-butenyl</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">4-pentenyl</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">4-hydroxybenzyl</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2-hydroxy-3-butenyl glucosinolate</span> were the major <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> components in crambe seed meal [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>]. We also found that <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2-hydroxy-3-butenyl glucosinolate</span> was the predominant <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> among the crambe <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span>, and its major breakdown product (&amp;gt;95% of total <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span>) was <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">1-cyano-2-hydroxy-butene</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CHB</span>) [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>]. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CHB</span> and other crambe <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products were found to have fumigation toxicity against insects in our early study [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>Different <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> have different insecticidal mode of actions, and some <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> are known to affect the respiratory function of insects [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B20&quot;&gt;</span>20<span class="t">&lt;/xref&gt;</span>]. Although it has been reported that the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> expiration of <span class="t">&lt;italic&gt;</span>Tenebrio molitor<span class="t">&lt;/italic&gt;</span> was reduced by feeding <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span>-containing rapeseed meal [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B24&quot;&gt;</span>24<span class="t">&lt;/xref&gt;</span>], there are no previous studies on the effect of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products on insect respiration.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>In this paper we report the insecticidal activity of crambe-related <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> and the effect of these chemicals on the respiratory function of insects. The latter is achieved by measuring the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> of the insects that are exposed to the chemicals. The fumigation effects of the breakdown products were compared and discussed together with the known <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">dichlorovos</span> and <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span>. The effect of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> was also compared with that of <span class="g-new" data-smi="C#N" data-name="hydrogen cyanide">hydrogen cyanide</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span>.<span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Results and Discussion<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>The house fly (<span class="t">&lt;italic&gt;</span>Musca domestica<span class="t">&lt;/italic&gt;</span>) and the lesser grain borer (<span class="t">&lt;italic&gt;</span>Rhyzopertha dominica<span class="t">&lt;/italic&gt;</span>) were chosen in the laboratory toxicity test, based on the availability and their significance as pests. In fact, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span>-containing extracts from crambe were found to be toxic to the larvae of the house fly [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>]. In the present study, we have found that some of the individual <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products from crambe were insecticidal toward <span class="t">&lt;italic&gt;</span>M. domestica<span class="t">&lt;/italic&gt;</span> as potent <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span>. The respective <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span> of <span class="g-old" data-smi="C(C=C)SC#N" data-name="allyl thiocyanate">allyl thiocyanate</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span>), <span class="g-old" data-smi="C(C=C)N=C=S" data-name="allyl isothiocyanate">allyl isothiocyanate</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span>) and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">allyl isocyanate(AIC)</span> were 0.1, 0.13 and 0.63 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span> (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>). This is in the same potential range of the toxicity of <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span> (0.08 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>), a commercial <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigant</span>. CHB, the major breakdown product of crambe <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolates</span> was not as potent a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigant</span> as others. Its <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span> was 6.2 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span> (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>).<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;table-wrap position=&quot;float&quot; id=&quot;T1&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Table 1<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>Fumigation toxicity of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products against the house fly adults in comparison with selected <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> (exposed for 24 h).<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;table frame=&quot;hsides&quot; rules=&quot;groups&quot;&gt;</span>
+          <span class="t">&lt;thead&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>compound<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>LC<span class="t">&lt;sub&gt;</span>50<span class="t">&lt;/sub&gt;</span> (Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>95% FL<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+          <span class="t">&lt;/thead&gt;</span>
+          <span class="t">&lt;tbody&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>dichlorovos<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>&amp;lt;0.02<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>chloropicrin<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.08<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.076â0.099<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl thiocyanate<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.1<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.08â0.12<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl isothiocyanate<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.13<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.10â0.16<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl isocyanate<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.63<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.56â0.70<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl cyanide<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.66<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.11â4.10<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1-cyano-2-hydroxy-3-butene<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>6.2<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.91â9.73<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>control<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+          <span class="t">&lt;/tbody&gt;</span>
+        <span class="t">&lt;/table&gt;</span>
+      <span class="t">&lt;/table-wrap&gt;</span>
+      <span class="t">&lt;p&gt;</span>Different insects have different susceptibilities toward chemicals. Although <span class="g-new" data-smi="O=P(OC)(OC=C(Cl)Cl)OC" data-name="dichlorvos">dichlorvos</span> was almost 10 times as toxic as <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span> in house fly test (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>), it was only 5 times more toxic in the lesser grain borer test (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>). ATC, the most potent <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigant</span> against the house fly was the most toxic against the lesser grain borer as well. Its <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span>, 0.55 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>, against the latter insect was between that of <span class="g-old" data-smi="O=P(OC)(OC=C(Cl)Cl)OC" data-name="dichlorvos">dichlorvos</span> (0.29 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>) and <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span> (1.3 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>). LC<span class="t">&lt;sub&gt;</span>50<span class="t">&lt;/sub&gt;</span>'s of <span class="g-old" data-smi="C(C=C)N=C=S" data-name="allyl isothiocyanate">allyl isothiocyanate</span> (1.57 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>) was in the same range of toxicity as <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span>. <span class="g-new" data-smi="C(C=C)N=C=O" data-name="Allyl isocyanate">Allyl isocyanate</span> (2.2 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>) and <span class="g-old" data-smi="C(C=C)C#N" data-name="allyl cyanide">allyl cyanide</span> (2.8 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>) were slightly less toxic compared to <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span>, although they were <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> about 1/10 as toxic as <span class="g-old" data-smi="O=P(OC)(OC=C(Cl)Cl)OC" data-name="dichlorvos">dichlorvos</span> (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>) <span class="g-old" data-smi="C(C=C)N=C=O" data-name="Allyl isocyanate">Allyl isocyanate</span> was tested to compare with the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;table-wrap position=&quot;float&quot; id=&quot;T2&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Table 2<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>Fumigation toxicity of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdowns products against the lesser grain borer in comparison with selected <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> (exposed for 24 h).<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;table frame=&quot;hsides&quot; rules=&quot;groups&quot;&gt;</span>
+          <span class="t">&lt;thead&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>compound<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>LC<span class="t">&lt;sub&gt;</span>50<span class="t">&lt;/sub&gt;</span> (Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span>)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>95% FL<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>CO<span class="t">&lt;sub&gt;</span>2<span class="t">&lt;/sub&gt;</span><span class="t">&lt;sup&gt;</span>*<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+          <span class="t">&lt;/thead&gt;</span>
+          <span class="t">&lt;tbody&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>dichlorovos<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.29<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.21â0.41<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>chloropicrin<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1.3<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1.20â1.42<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl thiocyanate<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.55<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.50â0.60<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.1<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl isothiocyanate<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1.57<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1.47â1.67<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.1<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl cyanide<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.8<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.26â3.48<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1-cyano-2-hydroxy-3-butene<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>&amp;gt;19.60<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>allyl isocyanate<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.2<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.06â2.34<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>10.4<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>hydrogen cyanide<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.2<span class="t">&lt;sup&gt;</span>**<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>control<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.7<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>control (HCN)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>â<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;center&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.6<span class="t">&lt;sup&gt;</span>**<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+          <span class="t">&lt;/tbody&gt;</span>
+        <span class="t">&lt;/table&gt;</span>
+        <span class="t">&lt;table-wrap-foot&gt;</span>
+          <span class="t">&lt;p&gt;</span><span class="t">&lt;sup&gt;</span>*<span class="t">&lt;/sup&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Î¼g</span>/mg body weight by <span class="t">&lt;italic&gt;</span>B. germanica.<span class="t">&lt;/italic&gt;</span> Exposed for 1 h. <span class="t">&lt;sup&gt;</span>**<span class="t">&lt;/sup&gt;</span> Done in a separate experiment.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/table-wrap-foot&gt;</span>
+      <span class="t">&lt;/table-wrap&gt;</span>
+      <span class="t">&lt;p&gt;</span>The high <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigant</span> toxicity of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products against the lesser grain borer may have important economic impact on stored grain insects management. These naturally occurring chemicals were also insecticidal as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigant</span> on other stored grain insects such as the sawtoothed grain beetle (<span class="t">&lt;italic&gt;</span>Oryzeaphilus surinamensis<span class="t">&lt;/italic&gt;</span> L.) and the red flour beetle (<span class="t">&lt;italic&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Tribolium</span> castaneum<span class="t">&lt;/italic&gt;</span> Herbst) (Tsao, et al., unpublished data, 1997).<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>Long-term fumigation tests against the lesser grain borer showed little improvement in the toxicity of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products. Also, the 2-day and 4-day tests resulted in higher mortality in the control (data not shown).<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>Little is known about the mode of action underlying the high fumigation toxicity of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products. <span class="g-new" data-smi="O=P(OC)(OC=C(Cl)Cl)OC" data-name="Dichlorvos">Dichlorvos</span> exerts its insecticidal toxicity against the insect nervous system, by inhibiting <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">acetylcholinesterase</span>. <span class="g-new" data-smi="CBr" data-name="Methyl bromide">Methyl bromide</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">chloropicrin's</span> insecticidal mode of action has been shown as their reactions with the nucleophilic sites such as OH, SH or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">NH</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> in vital enzymatic systems [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B25&quot;&gt;</span>25<span class="t">&lt;/xref&gt;</span>]. Many non-fumigant <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">insecticides</span> are known to affect the respiratory function of insects (e. g., <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">dinitrophenols</span>) [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B20&quot;&gt;</span>20<span class="t">&lt;/xref&gt;</span>]. In our fumigation test technique, inhalation (intake through the spiracles) was the only way for the insects to receive the volatile chemicals, although certain degree of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">absorption</span> could occur through the cuticle. Monitoring the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> production of the insects at sub-lethal doses in a closed chamber may provide valuable symptomatic information toward understanding how these chemical volatiles affect the respiration of insects and <span class="g-old" data-smi="[Pb]" data-name="lead">lead</span> to the eventual death of the insects. Monitoring <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> is one of the well established technique to study insect respiration and the effect of chemicals on the respiratory function, although it has sometimes been accompanied with simultaneous monitoring of <span class="g-old" data-smi="[O]" data-name="oxygen">oxygen</span> consumption [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B24&quot;&gt;</span>24<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B26&quot;&gt;</span>26<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>The quantity of the chemicals used in our <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> test was based on the toxicity tests of the chemicals (data not shown). At the sub-lethal levels, no mortality was observed within the test period. For <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span>, the amount of chemical utilized was 200 Î¼l of 10<span class="t">&lt;sup&gt;</span>4<span class="t">&lt;/sup&gt;</span> ppm corn oil solution. This is equivalent to ca. 10 Î¼g cm<span class="t">&lt;sup&gt;</span>-3<span class="t">&lt;/sup&gt;</span> of the chemical in air. This concentration is lethal to the lesser grain borer and the house fly, but not to the cockroaches due to different physiological aspects and the shorter exposure time in the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> monitoring test.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>By exposing <span class="t">&lt;italic&gt;</span>B. germanica<span class="t">&lt;/italic&gt;</span> to the fumes of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span>, we found that the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> production of this insect was significantly increased at each time interval (Tables <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span> and <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>, Fig. <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>). <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span> was the strongest <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> (respiration) enhancer. <span class="t">&lt;italic&gt;</span>B. germanica<span class="t">&lt;/italic&gt;</span> treated with <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span> produced more than 3 times more <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> than that in the control after being exposed for 1 h and 2 h. Even after 4 h, the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> was more than 75% higher for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span> (Fig. <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>). Although <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span> did not increase the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> as strongly as did <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span>, these two chemicals still showed significant effects after 2 h. The effect was not as significant at 4 h for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span> (Fig. <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>).<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;fig position=&quot;float&quot; id=&quot;F2&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Figure 2<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>The effect of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AIC</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span> on the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> of the <span class="t">&lt;italic&gt;</span>B. germanica<span class="t">&lt;/italic&gt;</span> adults at different time intervals. Bars within the same <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> followed by the same letter are not significantly different (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LSD</span>, Î± = 0.05).<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;graphic xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; position=&quot;float&quot; xlink:href=&quot;1472-6785-2-5-2.jpg&quot;&gt;</span>
+          <span class="pi">&lt;?image-name 1472-6785-2-5-2.jpg?&gt;</span>
+          <span class="pi">&lt;?image-size 31971?&gt;</span>
+          <span class="pi">&lt;?image-md5 6f1199c22903f27913c7649764b5595d?&gt;</span>
+          <span class="pi">&lt;?image-image-server-status LOAD_COMPLETED?&gt;</span>
+          <span class="pi">&lt;?image-original-height 1164?&gt;</span>
+          <span class="pi">&lt;?image-original-width 1200?&gt;</span>
+          <span class="pi">&lt;?image-scaled-height 582?&gt;</span>
+          <span class="pi">&lt;?image-scaled-width 600?&gt;</span>
+          <span class="pi">&lt;?image-cloudpmc-urn urn:cdn:blobs/aa0c/102324/6f1199c22903/1472-6785-2-5-2.jpg?&gt;</span>
+          <span class="pi">&lt;?thumb-name 1472-6785-2-5-2.gif?&gt;</span>
+          <span class="pi">&lt;?thumb-size 7736?&gt;</span>
+          <span class="pi">&lt;?thumb-md5 c3340d1bbd73328da131730b015be7a3?&gt;</span>
+          <span class="pi">&lt;?thumb-image-server-status NEVER_LOAD?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-height 97?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-width 100?&gt;</span>
+          <span class="pi">&lt;?thumb-cloudpmc-urn urn:cdn:blobs/aa0c/102324/c3340d1bbd73/1472-6785-2-5-2.gif?&gt;</span>
+        <span class="t">&lt;/graphic&gt;</span>
+      <span class="t">&lt;/fig&gt;</span>
+      <span class="t">&lt;p&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> were tested for comparing the mode of action of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products, because they are potential <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">inhibitors</span> of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> production [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B20&quot;&gt;</span>20<span class="t">&lt;/xref&gt;</span>]. AITC may have a different mode of action on the respiratory system than <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> as the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> production of <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> was significantly increased by AITC as compared to the control (Fig. <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>). The <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> of <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> was not significantly affected by <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> during the test period (Fig. <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F4&quot;&gt;</span>4<span class="t">&lt;/xref&gt;</span> and <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F5&quot;&gt;</span>5<span class="t">&lt;/xref&gt;</span>), indicating that these chemicals may not affect the respiratory system of the insect under the dose used in this experiment. The less effectiveness could be due in part to the low concentration of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span>. Effort to use extended exposure time was also tried, however, high morality was observed when <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> was exposed to <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> at higher dose, or for longer time (&amp;gt;60 min and &amp;gt;35 min, respectively). There was no particular reason except availability for using <span class="t">&lt;italic&gt;</span>P. Americana<span class="t">&lt;/italic&gt;</span> instead of <span class="t">&lt;italic&gt;</span>B. germanica.<span class="t">&lt;/italic&gt;</span><span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;fig position=&quot;float&quot; id=&quot;F3&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Figure 3<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>The effect of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">AITC</span> on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> of the <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> at different time intervals. Each data point is an average of two replications.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;graphic xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; position=&quot;float&quot; xlink:href=&quot;1472-6785-2-5-3.jpg&quot;&gt;</span>
+          <span class="pi">&lt;?image-name 1472-6785-2-5-3.jpg?&gt;</span>
+          <span class="pi">&lt;?image-size 28350?&gt;</span>
+          <span class="pi">&lt;?image-md5 44b91f4a86792f929a15d68eb89bbfbc?&gt;</span>
+          <span class="pi">&lt;?image-image-server-status LOAD_COMPLETED?&gt;</span>
+          <span class="pi">&lt;?image-original-height 1045?&gt;</span>
+          <span class="pi">&lt;?image-original-width 1195?&gt;</span>
+          <span class="pi">&lt;?image-scaled-height 524?&gt;</span>
+          <span class="pi">&lt;?image-scaled-width 600?&gt;</span>
+          <span class="pi">&lt;?image-cloudpmc-urn urn:cdn:blobs/aa0c/102324/44b91f4a8679/1472-6785-2-5-3.jpg?&gt;</span>
+          <span class="pi">&lt;?thumb-name 1472-6785-2-5-3.gif?&gt;</span>
+          <span class="pi">&lt;?thumb-size 6958?&gt;</span>
+          <span class="pi">&lt;?thumb-md5 07d07ed85467fba8a967f0c22eca6e23?&gt;</span>
+          <span class="pi">&lt;?thumb-image-server-status NEVER_LOAD?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-height 87?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-width 100?&gt;</span>
+          <span class="pi">&lt;?thumb-cloudpmc-urn urn:cdn:blobs/aa0c/102324/07d07ed85467/1472-6785-2-5-3.gif?&gt;</span>
+        <span class="t">&lt;/graphic&gt;</span>
+      <span class="t">&lt;/fig&gt;</span>
+      <span class="t">&lt;fig position=&quot;float&quot; id=&quot;F4&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Figure 4<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>The effect of <span class="g-old" data-smi="C#N" data-name="hydrogen cyanide">hydrogen cyanide</span> on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> of the <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> nymphs at different time intervals. Each data point is an average of two replications.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;graphic xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; position=&quot;float&quot; xlink:href=&quot;1472-6785-2-5-4.jpg&quot;&gt;</span>
+          <span class="pi">&lt;?image-name 1472-6785-2-5-4.jpg?&gt;</span>
+          <span class="pi">&lt;?image-size 31622?&gt;</span>
+          <span class="pi">&lt;?image-md5 9483ffd4d79adbfc19da70e3e329bf55?&gt;</span>
+          <span class="pi">&lt;?image-image-server-status LOAD_COMPLETED?&gt;</span>
+          <span class="pi">&lt;?image-original-height 971?&gt;</span>
+          <span class="pi">&lt;?image-original-width 1195?&gt;</span>
+          <span class="pi">&lt;?image-scaled-height 487?&gt;</span>
+          <span class="pi">&lt;?image-scaled-width 600?&gt;</span>
+          <span class="pi">&lt;?image-cloudpmc-urn urn:cdn:blobs/aa0c/102324/9483ffd4d79a/1472-6785-2-5-4.jpg?&gt;</span>
+          <span class="pi">&lt;?thumb-name 1472-6785-2-5-4.gif?&gt;</span>
+          <span class="pi">&lt;?thumb-size 6491?&gt;</span>
+          <span class="pi">&lt;?thumb-md5 db2a6d60c9d8efd69e138440da8bc569?&gt;</span>
+          <span class="pi">&lt;?thumb-image-server-status NEVER_LOAD?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-height 81?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-width 100?&gt;</span>
+          <span class="pi">&lt;?thumb-cloudpmc-urn urn:cdn:blobs/aa0c/102324/db2a6d60c9d8/1472-6785-2-5-4.gif?&gt;</span>
+        <span class="t">&lt;/graphic&gt;</span>
+      <span class="t">&lt;/fig&gt;</span>
+      <span class="t">&lt;fig position=&quot;float&quot; id=&quot;F5&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Figure 5<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>The effect of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> of the <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> at different time intervals. Each data point is an average of two replications.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;graphic xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; position=&quot;float&quot; xlink:href=&quot;1472-6785-2-5-5.jpg&quot;&gt;</span>
+          <span class="pi">&lt;?image-name 1472-6785-2-5-5.jpg?&gt;</span>
+          <span class="pi">&lt;?image-size 28358?&gt;</span>
+          <span class="pi">&lt;?image-md5 c65c41ef4bab8d7495b6c20fe8e929fc?&gt;</span>
+          <span class="pi">&lt;?image-image-server-status LOAD_COMPLETED?&gt;</span>
+          <span class="pi">&lt;?image-original-height 915?&gt;</span>
+          <span class="pi">&lt;?image-original-width 1196?&gt;</span>
+          <span class="pi">&lt;?image-scaled-height 459?&gt;</span>
+          <span class="pi">&lt;?image-scaled-width 600?&gt;</span>
+          <span class="pi">&lt;?image-cloudpmc-urn urn:cdn:blobs/aa0c/102324/c65c41ef4bab/1472-6785-2-5-5.jpg?&gt;</span>
+          <span class="pi">&lt;?thumb-name 1472-6785-2-5-5.gif?&gt;</span>
+          <span class="pi">&lt;?thumb-size 7069?&gt;</span>
+          <span class="pi">&lt;?thumb-md5 dcbc05cb37dce9fa82e6bbcd20766f09?&gt;</span>
+          <span class="pi">&lt;?thumb-image-server-status NEVER_LOAD?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-height 76?&gt;</span>
+          <span class="pi">&lt;?thumb-scaled-width 100?&gt;</span>
+          <span class="pi">&lt;?thumb-cloudpmc-urn urn:cdn:blobs/aa0c/102324/dcbc05cb37dc/1472-6785-2-5-5.gif?&gt;</span>
+        <span class="t">&lt;/graphic&gt;</span>
+      <span class="t">&lt;/fig&gt;</span>
+      <span class="t">&lt;p&gt;</span>Toxicity of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">isothiocyanates</span> has been attributed to inactivation of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">thiol</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> of essential enzymes [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B27&quot;&gt;</span>27<span class="t">&lt;/xref&gt;</span>]. The mode of action of many <span class="g-old" data-smi="[N-]=C=S" data-name="isothiocyanate">isothiocyanate</span> compounds has also been attributed to their capability for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">alkylating</span> the nucleophilic <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">biopolymers</span> such as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">DNA</span>, thus having cytotoxic properties which can affect the formation of the spiracular epidermis and crochet on the prolegs of tobacco hornworm (<span class="t">&lt;italic&gt;</span>Manduca sexta<span class="t">&lt;/italic&gt;</span> L.) caterpillars [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B28&quot;&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">28</span><span class="t">&lt;/xref&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-</span><span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B30&quot;&gt;</span>30<span class="t">&lt;/xref&gt;</span>]. Our bioassay avoids totally any direct contact between the insects and the chemical, thus the insecticidal effect is very likely caused by inspiration of the chemical by the insects through their spiracles. The increased <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> observed in this study indicated a different mode of action of these <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products. This new mode of action may be similar to that of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">dinitrophenols</span>, although further investigation is needed to prove this speculation. Compounds such as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">dinitrophenol</span> are uncouplers or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">inhibitors</span> of oxidative <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">phosphorylation</span> [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B31&quot;&gt;</span>31<span class="t">&lt;/xref&gt;</span>]. When the coupling between the respiratory chain and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">phosphorylation</span> is broken, respiratory control is lost, and the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">electron</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">transport</span> along the chain occurs at full speed without producing <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATP</span>, the high energy <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">molecule</span>. Uncouplers kill insects not by inhibiting normal <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">electron</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">transport</span> of the respiratory chain, but rather by enhancing the respiration [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B27&quot;&gt;</span>27<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B31&quot;&gt;</span>31<span class="t">&lt;/xref&gt;</span>]. When the energy-transfer (production of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATP</span>) is blocked, and at the same time, the respiration is accelerated, the insects have to use their stored energy sources and the exhaustion of those resources then <span class="g-old" data-smi="[Pb]" data-name="lead">lead</span> directly to the death of the insects [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B31&quot;&gt;</span>31<span class="t">&lt;/xref&gt;</span>]. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Insecticides</span> such as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> are known to affect the respiratory function by inhibiting certain enzymes in the respiratory <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">electron</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">transport</span> chain of insects, thus reducing the <span class="g-old" data-smi="[O]" data-name="oxygen">oxygen</span> consumption and perhaps <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> production as well [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B20&quot;&gt;</span>20<span class="t">&lt;/xref&gt;</span>]. This may explain why <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> did not increase the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">emission</span> at low dose.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>As with many other conventional <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span>, we also found that some of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products and related chemicals were strong hatching <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">inhibitors</span> for the soybean cyst nematode (<span class="t">&lt;italic&gt;</span>Heterodera <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glycines</span><span class="t">&lt;/italic&gt;</span>) (unpublished data, 1996)<span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Conclusions<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>Using <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">glucosinolate</span> breakdown products as safer <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">fumigants</span> in pest control is a novel approach in integrated pest management, and at the same time, since these <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">natural products</span> are considered fully biodegradable and less toxic, considering many cruciferous vegetables are consumed daily, there should be fewer environmental concerns. The bioactivity of these compounds may be from their effect on the insect respiratory system indicated by the inhibited or accelerated <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> production.<span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec sec-type=&quot;materials|methods&quot;&gt;</span>
+      <span class="t">&lt;title&gt;</span>Materials and Methods<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Chemicals<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;p&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Dichlorovos</span> and <span class="g-old" data-smi="O=[N+](C(Cl)(Cl)Cl)[O-]" data-name="chloropicrin">chloropicrin</span> were purchased from ChemService (West Chester, PA). <span class="g-old" data-smi="C(C=C)N=C=S" data-name="Allyl isothiocyanate">Allyl isothiocyanate</span>, <span class="g-old" data-smi="C(C=C)N=C=O" data-name="allyl isocyanate">allyl isocyanate</span>, <span class="g-old" data-smi="C(C=C)C#N" data-name="allyl cyanide">allyl cyanide</span> and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span> were purchased from Aldrich Chemical Co. (Milwaukee, WI). <span class="g-new" data-smi="C(C=C)SC#N" data-name="Allyl thiocyanate">Allyl thiocyanate</span> was synthesized in this laboratory by reacting <span class="g-new" data-smi="C(C=C)Cl" data-name="allyl chloride">allyl chloride</span> with <span class="g-new" data-smi="[S-]C#N.[K+]" data-name="potassium thiocyanate">potassium thiocyanate</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">KSCN</span>) in <span class="g-old" data-smi="CS(=O)C" data-name="dimethyl sulfoxide">dimethyl sulfoxide</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">DMSO</span>). Briefly, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">KSCN</span> (0.31 mol) and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">DMSO</span> (200 ml) were added to a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">1-L</span> flask and heated on a <span class="g-old" data-smi="O" data-name="water">water</span> bath to <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">85Â°C</span> followed by <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">addition</span> of <span class="g-old" data-smi="C(C=C)Cl" data-name="allyl chloride">allyl chloride</span> (0.30 mol) to the flask. The <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">mixture</span> was allowed to cool to room temperature, and then the product <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ATC</span> was extracted with <span class="g-new" data-smi="C(C)OCC" data-name="ethyl ether">ethyl ether</span> (200 ml Ã 4). ATC was purified using column <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">chromatography</span> on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">silica</span> gel with 2/10 <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">ether</span>/<span class="g-new" data-smi="CCCCCC" data-name="hexane">hexane</span>, and the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">structure</span> was confirmed by nuclear magnetic resonance (NMR) and infrared (IR) <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">spectroscopy</span>: <span class="t">&lt;sup&gt;</span>1<span class="t">&lt;/sup&gt;</span>H NMR Î´<span class="t">&lt;sub&gt;</span>TMS<span class="t">&lt;/sub&gt;</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CDCl</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">3</span><span class="t">&lt;/sub&gt;</span>) ppm: 3.58 (2H, d, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-C</span><span class="t">&lt;underline&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">H</span><span class="t">&lt;/underline&gt;</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-SCN</span>), 5.34â5.43 (2H, dd, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">C</span><span class="t">&lt;underline&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">H</span><span class="t">&lt;/underline&gt;</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-CH</span>-), 5.86â6.02 (1H, m, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CH</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-C</span><span class="t">&lt;underline&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">H</span><span class="t">&lt;/underline&gt;</span>-); IR: 2930â2960, 2870, 2160, 1640,1400, 1230, 985, 930 cm<span class="t">&lt;sup&gt;</span>-1<span class="t">&lt;/sup&gt;</span>. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">l-Cyano-2-hydroxy-3-butene</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CHB</span>) was extracted from the defatted crambe meal. One hundred g of the crambe meal (National Sun <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Inc</span>., Enderland, ND) was extracted with <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CH</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Cl</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> at <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">45Â°C</span> in a Soxhlet apparatus overnight, and isolated and purified by using column and thin layer <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">chromatography</span>. The <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">structure</span> of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CHB</span> was confirmed by NMR and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">mass spectrometry</span>: <span class="t">&lt;sup&gt;</span>1<span class="t">&lt;/sup&gt;</span>H NMR Î´<span class="t">&lt;sub&gt;</span>TMS<span class="t">&lt;/sub&gt;</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CDCl</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">3</span><span class="t">&lt;/sub&gt;</span>) ppm: 2.60 (2H, dd, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-C</span><span class="t">&lt;underline&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">H</span><span class="t">&lt;/underline&gt;</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-CN</span>), 2.75 (H, brs, <span class="smiles" title="valid SMILES">-CH(O</span><span class="t">&lt;underline&gt;</span><span class="smiles" title="valid SMILES">H</span><span class="t">&lt;/underline&gt;</span><span class="smiles" title="valid SMILES">)</span>-), 4.37â4.50 (1H, m, <span class="smiles" title="valid SMILES">-C</span><span class="t">&lt;underline&gt;</span><span class="smiles" title="valid SMILES">H</span><span class="t">&lt;/underline&gt;</span><span class="smiles" title="valid SMILES">(OH)</span>-), 5.25â5.45 (2H, m, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">C</span><span class="t">&lt;underline&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">H</span><span class="t">&lt;/underline&gt;</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-CH</span>-), 5.85â5.98 (1H, m, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CH</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">-C</span><span class="t">&lt;underline&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">H</span><span class="t">&lt;/underline&gt;</span>-); IR: 3480, 3000, 2930, 2270, 1640, 14251135, 1070, 1000, 945 cm<span class="t">&lt;sup&gt;</span>-1<span class="t">&lt;/sup&gt;</span>. The above NMR was consistent with that of Das and Torssell [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B32&quot;&gt;</span>32<span class="t">&lt;/xref&gt;</span>] and the IR data is in accordance with Daxenbichler <span class="t">&lt;italic&gt;</span>et al.<span class="t">&lt;/italic&gt;</span>[<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B33&quot;&gt;</span>33<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Fumigation tests<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Fumigation of the House Fly<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Approximately 1 g 1/1 dry <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">sucrose</span>/powdered milk was placed in the bottom of a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">40-</span>ml jar, along with a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2-cm</span> piece of cotton roll moistened with distilled <span class="g-old" data-smi="O" data-name="water">water</span>. Ten to 15 house fly adults (<span class="t">&lt;italic&gt;</span>Musca domestica<span class="t">&lt;/italic&gt;</span> L., laboratory reared Orlando regular strain, one week post-emergence) were anesthetized with <span class="g-old" data-smi="C(=O)=O" data-name="carbon dioxide">carbon dioxide</span> and placed in the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">40-</span>ml jars. The jars were each covered with nylon mesh secured by a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rubber</span> band. Three 40 ml jars were placed in the bottom of a 2745 ml amber jar. A filter paper (Whatman No. 1, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">9-cm</span> diameter) was folded in quarters and placed in the jar as well. About 30 min after the flies recovered from anesthesia, 200 Î¼l of the appropriate corn oil (Flavoriteâ¢ pure corn oil, Preferred Products, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Inc</span>., Chaska, MN) solution of the chemicals was applied to the filter paper with an eppendorf pipette, the disposable tip of which was left in the jar. The control was treated under the same conditions with a corn oil blank. The above jar was tightly sealed and left for 24 h, when mortality was read. The insects were considered dead when they displayed no observable motion when prodded. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span> was calculated based on 5 concentrations.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Fumigation of the lesser grain borer<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Ten adult lesser grain borers (<span class="t">&lt;italic&gt;</span>Rhyzopertha dominica<span class="t">&lt;/italic&gt;</span> Fabricius, laboratory reared Manhattan KS strain) were placed in a 1.5 Ã <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">5-cm</span> glass tube with 2 g whole wheat kernels. The tubes were closed on both ends by a tight <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">metal</span> mesh secured with parafilm. Three tubes were tied together with a wire, and suspended from the top of a jar (490 ml). A filter paper (same as used in the fly test), was folded in quarters and placed at the bottom of the jar. One hundred <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Î¼l</span> of the appropriate corn oil dilution of the chemicals was applied to the filter paper with an eppendorf pipette, the disposable tip of which was left in the jar. Corn oil was used in the control. The jar was tightly capped and left for 24 h, at which time the mortality was recorded. An insect was considered dead when it displayed no observable motion upon prodding. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span> was calculated based on 5 concentrations.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Measuring CO<span class="t">&lt;sub&gt;</span>2<span class="t">&lt;/sub&gt;</span> emitted by insects<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>We chose the <span class="g-old" data-smi="[GeH4]" data-name="German">German</span> (<span class="t">&lt;italic&gt;</span>Blattella germanica<span class="t">&lt;/italic&gt;</span> L.) and the American cockroach (<span class="t">&lt;italic&gt;</span>Periplaneta americana<span class="t">&lt;/italic&gt;</span> L.) in this test because they are non-flying, thus producing a steady and measurable quantity of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span>. Two adult <span class="t">&lt;italic&gt;</span>B. germanica<span class="t">&lt;/italic&gt;</span> (1 male, 1 female without ootheca) or 2 nymphs (average weight 0.55 g) of <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> were weighed and put in a glass tube (5 Ã 1.5 cm) with both ends covered with mesh screen. A bigger <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">size</span> of tubing (5 Ã 2 cm) was used for the <span class="t">&lt;italic&gt;</span>P. americana.<span class="t">&lt;/italic&gt;</span> The tube was then placed into a glass bottle (220 ml) together with a quarterly folded filter paper (same as used above). A <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rubber</span> stopper with glass inlet and outlet was tightly capped on the bottle with both ends sealed with a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rubber</span> septum (Fig <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>). An infrared <span class="g-old" data-smi="C(=O)=O" data-name="carbon dioxide">carbon dioxide</span> analyzer (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LIRA</span><span class="t">&lt;sup&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Â</span>®<span class="t">&lt;/sup&gt;</span> Infrared gas analyzer, Model 3000, Mine Safety Appliances Company, Pittsburgh, PA) was used to measure the emitted <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span>. The sealed bottle was flushed with <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span>-free air (compressed air filtered through soda lime tubes and a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">NaOH</span> trap) before introducing the chemical. A sub-lethal dose of the breakdown products (200 Î¼l of 10000 ppm chemical in corn oil for the <span class="t">&lt;italic&gt;</span>B. germanica,<span class="t">&lt;/italic&gt;</span> and 100 Î¼l of 1000 ppm for <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span>) was immediately injected with a syringe through the septum onto the filter paper inside the system (Fig. <span class="t">&lt;xref ref-type=&quot;fig&quot; rid=&quot;F1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>). In this system, direct contact between the insects and the chemical is completely avoided. The <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> emitted by the test insects was recorded at Range 1 (the most sensitive range) of the instrument at different exposure times. There were three replicates for each treatment unless stated otherwise, and the same volume of corn oil was used in the control. Tests on the effect of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> were achieved by wetting the filter paper with 100 Î¼l of 1 N <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCl</span>, and, after flushing out the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span>, injecting 20 Î¼l of 1 N <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">NaCN</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">aqueous</span> solution onto the paper. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Rotenone</span> (5 Î¼l of 100 ppm in <span class="g-old" data-smi="CC(=O)C" data-name="acetone">acetone</span>) was injected to the thorax of the <span class="t">&lt;italic&gt;</span>P. americana<span class="t">&lt;/italic&gt;</span> nymph in the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> test and same the amount of <span class="g-old" data-smi="CC(=O)C" data-name="acetone">acetone</span> was used in the control. <span class="g-old" data-smi="O" data-name="Water">Water</span> or <span class="g-old" data-smi="CC(=O)C" data-name="acetone">acetone</span> was used in the control for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HCN</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rotenone</span>.<span class="t">&lt;/p&gt;</span>
+          <span class="t">&lt;fig position=&quot;float&quot; id=&quot;F1&quot;&gt;</span>
+            <span class="t">&lt;label&gt;</span>Figure 1<span class="t">&lt;/label&gt;</span>
+            <span class="t">&lt;caption&gt;</span>
+              <span class="t">&lt;p&gt;</span>A descriptive diagram of the apparatus used in the insect <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> monitoring test.<span class="t">&lt;/p&gt;</span>
+            <span class="t">&lt;/caption&gt;</span>
+            <span class="t">&lt;graphic xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; position=&quot;float&quot; xlink:href=&quot;1472-6785-2-5-1.jpg&quot;&gt;</span>
+              <span class="pi">&lt;?image-name 1472-6785-2-5-1.jpg?&gt;</span>
+              <span class="pi">&lt;?image-size 22710?&gt;</span>
+              <span class="pi">&lt;?image-md5 09dd8be6f06009525d3d4812a64e78ac?&gt;</span>
+              <span class="pi">&lt;?image-image-server-status LOAD_COMPLETED?&gt;</span>
+              <span class="pi">&lt;?image-original-height 1388?&gt;</span>
+              <span class="pi">&lt;?image-original-width 1195?&gt;</span>
+              <span class="pi">&lt;?image-scaled-height 696?&gt;</span>
+              <span class="pi">&lt;?image-scaled-width 600?&gt;</span>
+              <span class="pi">&lt;?image-cloudpmc-urn urn:cdn:blobs/aa0c/102324/09dd8be6f060/1472-6785-2-5-1.jpg?&gt;</span>
+              <span class="pi">&lt;?thumb-name 1472-6785-2-5-1.gif?&gt;</span>
+              <span class="pi">&lt;?thumb-size 9214?&gt;</span>
+              <span class="pi">&lt;?thumb-md5 b1191f4026f19cc4c5442aa19110d68c?&gt;</span>
+              <span class="pi">&lt;?thumb-image-server-status NEVER_LOAD?&gt;</span>
+              <span class="pi">&lt;?thumb-scaled-height 116?&gt;</span>
+              <span class="pi">&lt;?thumb-scaled-width 100?&gt;</span>
+              <span class="pi">&lt;?thumb-cloudpmc-urn urn:cdn:blobs/aa0c/102324/b1191f4026f1/1472-6785-2-5-1.gif?&gt;</span>
+            <span class="t">&lt;/graphic&gt;</span>
+          <span class="t">&lt;/fig&gt;</span>
+          <span class="t">&lt;p&gt;</span>The recorded peak meter readings (PMR) were converted to mg of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> according to the following formula [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B34&quot;&gt;</span>34<span class="t">&lt;/xref&gt;</span>]:<span class="t">&lt;/p&gt;</span>
+          <span class="t">&lt;p&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CO</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">2</span><span class="t">&lt;/sub&gt;</span> (mg) = 0.0092+0.00795*PMR+0.0000002*(PMR)<span class="t">&lt;sup&gt;</span>2<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Data analysis<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;p&gt;</span>Probit analysis was used to determine <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">LC</span><span class="t">&lt;sub&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">50</span><span class="t">&lt;/sub&gt;</span>, 95% FL, and slopes according to methods outlined by Finney [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B35&quot;&gt;</span>35<span class="t">&lt;/xref&gt;</span>]. Means were separated using least significant differences (LSD) (P = 0.05) [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B36&quot;&gt;</span>36<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+  <span class="t">&lt;/body&gt;</span>
+  <span class="t">&lt;back&gt;</span>
+    <span class="t">&lt;ack&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Acknowledgements<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;p&gt;</span>The authors thank Dr. T. A. Anderson of the Texas Tech University, Texas, USA for his assistance in the use of the infrared <span class="g-old" data-smi="C(=O)=O" data-name="carbon dioxide">carbon dioxide</span> analyzer.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;/ack&gt;</span>
+    <span class="t">&lt;ref-list&gt;</span>
+      <span class="t">&lt;ref id=&quot;B1&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Fenwick<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GR<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Heaney<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RK<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Mullin<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>WJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Glucosinolates and their breakdown products in food and food plants.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>CRC Crit Rev Food Sci Nutr<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1983<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>18<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>123<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>201<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1080/10408398209527361<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>6337782<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B2&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;book&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Chew<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>FS<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;editor&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cutler HG<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Biological effects of glucosinolates,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Biologically Active Natural Products: Potential Use in Agriculture<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1988<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;publisher-name&gt;</span>American Chemical Society, Washington D. C., USA.<span class="t">&lt;/publisher-name&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>156<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>181<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B3&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>MacLeod<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Rossiter<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JT<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Non-enzymic degradation of 2-hydroxybut 3-enylglucosinolate (progoitrin).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Phytochem<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1986<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>25<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>855<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>858<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1016/0031-9422(86)80016-4<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B4&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>MacLeod<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Panesar<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>SS<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Gil<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>V<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Thermal degradation of glucosinolates in Cruciferae.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Phytochem<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1981<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>20<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>977<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>980<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1016/0031-9422(81)83011-7<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B5&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;book&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Duncon<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;editor&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>D'Mello JPF, Duffus CM, Duffus JH<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Glucosinolates.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Toxic Substances in Crop Plans<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1991<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;publisher-name&gt;</span>The Royal Society of Chemistry, Cambridge, UK.<span class="t">&lt;/publisher-name&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>126<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>147<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B6&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;book&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Larsen<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PO<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;editor&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Stumpf PK, Conn EE<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Glucosinolates.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>The Biochemistry of Plants<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1981<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>7<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;publisher-name&gt;</span>Academic Press Inc., New York, USA.<span class="t">&lt;/publisher-name&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>501<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>525<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B7&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lichtenstein<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>EP<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Morgan<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DG<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Mueller<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>CH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Naturally occurring insecticides in cruciferous crops.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Agric Food Chem<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1964<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>12<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>158<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>161<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B8&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Tsao<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>R<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Reuber<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>M<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Johnson<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>L<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Coats<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JR<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Insecticidal toxicity of glucosinolate-containing extracts from crambe seeds.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Agric Entomol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1996<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>13<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>109<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>120<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B9&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Borek<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>V<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Morra<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>MJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Brown<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>McCaffrey<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JP<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Allelochemicals produced during sinigrin decomposition in soil.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Agric Food Chem<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1994<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>42<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1030<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1034<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B10&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Nair<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KSS<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>McEwen<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>FL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Host selection by the adult cabbage maggot, <span class="t">&lt;italic&gt;</span>Hylemya brassicae<span class="t">&lt;/italic&gt;</span> (Diptera: Anthomyiidae): effect of glucosinolates and common nutrients on oviposition.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Can Entomol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1976<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>108<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1021<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1030<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B11&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Feeny<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>P<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Paauwe<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Demong<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>NJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Flea beetles and mustard oils: host plant specificity of Phyllotreta cruciferae and Phyllotreta striolata adults (Coleoptera: Chrysomelidae).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Ann Entomol Soc Amer<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1970<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>63<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>832<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>841<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B12&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Vincent<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>C<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Steward<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RK<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Effect of allyl isothiocyanate on field behavior of crucifer-feeding flea beetles (Coleoptera: Chrysomelidae) (Phyllotreta cruciferae, Psylliodes punctulata, Phyllotreta bipustulata, Phyllotreta striolata, rutabagas).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Chem Ecol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1984<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>10<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>33<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>39<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1007/BF00987641<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>24318226<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B13&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hovanitz<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>W<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Chang<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>VCS<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Honch<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>G<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The effectiveness of different isothiocyanates on attracting larvae of <span class="t">&lt;italic&gt;</span>Pieris rapae<span class="t">&lt;/italic&gt;</span>.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Res Lipid<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1963<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>1<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>249<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>259<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B14&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Huang<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>X<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Renwick<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JAA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Relative activities of glucosinolates as oviposition stimulants for <span class="t">&lt;italic&gt;</span>Pieris rapae<span class="t">&lt;/italic&gt;</span> and <span class="t">&lt;italic&gt;</span>P. napi oleracae<span class="t">&lt;/italic&gt;</span>.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Chem Ecol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1994<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>20<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1025<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1037<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1007/BF02059739<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>24242300<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B15&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Borek<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>V<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Elberson<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>LR<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>McCaffrey<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JP<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Morra<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>MJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Toxicity of aliphatic and aromatic isothiocyanates to eggs of the black vine weevil (Coleoptera: Curculionidae).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Econ Entomol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1995<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>88<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1192<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1196<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B16&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Brown<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Morra<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>MJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>McCaffrey<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JP<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Auld<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Williams<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>L<span class="t">&lt;/given-names&gt;</span>
+              <span class="t">&lt;suffix&gt;</span>III<span class="t">&lt;/suffix&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Allelochemicals produced during glucosinolate degradation in soil.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Chem Ecol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1991<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>17<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>2021<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>2034<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1007/BF00992585<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>24258495<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B17&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Williams<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>L<span class="t">&lt;/given-names&gt;</span>
+              <span class="t">&lt;suffix&gt;</span>III<span class="t">&lt;/suffix&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Morra<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>MJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Brown<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>McCaffrey<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JP<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Toxicity of allyl isothiocyanate-amended soil to <span class="t">&lt;italic&gt;</span>Limonius californicus<span class="t">&lt;/italic&gt;</span> (Mann).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Chem Ecol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1993<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>19<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1033<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1046<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1007/BF00987366<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>24249123<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B18&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lazzeri<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>L<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Tacconi<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>R<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Palmieri<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>S<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>In vivo activity of some glucosinolates and their reaction products toward a population of the nematode <span class="t">&lt;italic&gt;</span>Heterodera schachtii<span class="t">&lt;/italic&gt;</span>.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Agric Food Chem<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1993<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>41<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>825<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>829<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B19&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Mojtahedi<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>H<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Santo<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GS<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hang<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AN<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Wilson<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Suppression of root-knot nematode populations with selected rapeseed cultivars as green manure.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Nematol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1991<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>23<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>170<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>174<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmcid&quot;&gt;</span>PMC2619149<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>19283108<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B20&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Ware<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GW<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The Pesticides Book,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Thomson Publications, Fresno, CA, USA<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1994<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B21&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Meister<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RT<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Farm Chemicals Handbook,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Meister Publication Company, Willoughby, OH, USA<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1996<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B22&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cink<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>J<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Harein<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Stored Grain Pest Management,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>University of Minnesota, St Paul, USA<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1989<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B23&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Peterson<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>CJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Tsao<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>R<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Coats<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JR<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Glucosinolate Aglucones and Analogues: Insecticidal Properties and a QSAR,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Pestic Sci<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1998<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>54<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>35<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>42<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1002/(SICI)1096-9063(199809)54:1&amp;lt;35::AID-PS776&amp;gt;3.3.CO;2-1<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B24&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Pracros<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>P<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Couranjou<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>C<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Moreau<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>R<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Effects on growth and respiration due to the ingestion of the rapeseed meal glucosinolates in young larvae of <span class="t">&lt;italic&gt;</span>Tenebrio molitor<span class="t">&lt;/italic&gt;</span>.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Comp Biochem Physiol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1992<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>163B<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>391<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>395<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1016/0300-9629(92)90599-L<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B25&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cremlyn<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Agrochemicals: Preparation and Mode of Action,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>John Wiley &amp;amp; Sons, Inc, New York, USA<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1991<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B26&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lighton<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JRB<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Wehner<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>R<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Ventilation and respiratory metabolism in the thermophilic desert ant, <span class="t">&lt;italic&gt;</span>Cataglyphis bicolor<span class="t">&lt;/italic&gt;</span> (Hymenoptera, Formicidae).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Comp Physiol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1993<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>163<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>11<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>17<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B27&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hassall<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The Biochemistry and Uses of Pesticides,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>MacMillan Press Ltd, London, UK<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1990<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B28&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;book&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lawley<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;editor&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Searly CE<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Carcinogenesis by alkylating agents,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Chemical Carcinogenesis<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1984<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;publisher-name&gt;</span>ACS Monograph 182, American Chemical Society, Washington, D.C., USA.<span class="t">&lt;/publisher-name&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>331<span class="t">&lt;/fpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B29&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Ujvary<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>I<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Matolcsy<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>G<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Riddiford<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>LM<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hiruma<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>K<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Horwath<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Inhibition of spiracle and crochet formation and juvenile hormone activity of isothiocyanate derivatives in the tobacco hornworm,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Manduca sexta Pestic Biochem Physiol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1989<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>35<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>259<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>274<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B30&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;book&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Weber<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>B<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Martin<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>D<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Otto<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>D<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;editor&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>D Otto, B Weber<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Novel Insecticidal effects of isothiocyanate compounds.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Insecticides: Mechanism of Action and Resistance<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1992<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;publisher-name&gt;</span>Intercept Inc., Andover, UK.<span class="t">&lt;/publisher-name&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>63<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>73<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B31&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cremlyn<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Agrochemicals: Preparation and Mode of Action,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>John Wiley &amp;amp; Sons, Inc, New York, USA<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1991<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B32&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Das<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>NB<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Torssell<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KBG<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Silyl nitronates, nitrile oxides, and derived 2-isoxazolines in organic synthesis, functionalization of butadiene, a novel route to furans and 2-isoxazolines as an alternative to aldol-type condensations.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Tetrahedron<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1983<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>39<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>2247<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>2253<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1016/S0040-4020(01)91947-7<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B33&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Daxenbichler<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>ME<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>VanEtten<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>CH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Wolff<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>IA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Diastereomeric episulfides from epi-progoitrin upon autolysis of crambe seed meal.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Phytochem<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1968<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>7<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>989<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>996<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1016/S0031-9422(00)82186-X<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B34&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Edwards<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>NT<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>A timesaving technique for measuring respiration rates in incubated soil samples.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Soil Sci Soc Am J<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1982<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>46<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1114<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1116<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B35&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Finney<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Probit analysis.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Cambridge University Press Cambridge, UK<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1971<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B36&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;other&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;collab&gt;</span>SAS Institute<span class="t">&lt;/collab&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>SAS User's Guide,<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>SAS Institute, Cary, North Carolina, USA<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1991<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+    <span class="t">&lt;/ref-list&gt;</span>
+  <span class="t">&lt;/back&gt;</span>
+<span class="t">&lt;/article&gt;</span>
+</pre>
+</main>
+<div id="tip"><img alt=""><div class="msg">Could not load the structure depiction</div><div class="cap"></div></div>
+<script>
+(function () {
+  var tip = document.getElementById('tip');
+  var img = tip.querySelector('img');
+  var cap = tip.querySelector('.cap');
+  var base = 'https://www.simolecule.com/cdkdepict/depict/bot/svg?smi=';
+  var opts = '&w=-1&h=-1&abbr=on&hdisp=S&annotate=none&r=0&mc=sn';
+  var cur = null;
+  function hide() { tip.style.display = 'none'; cur = null; }
+  function show(el) {
+    if (el === cur) return;
+    cur = el;
+    var smi = el.getAttribute('data-smi');
+    var name = el.getAttribute('data-name');
+    tip.className = '';
+    img.src = base + encodeURIComponent(smi) + '%20' + encodeURIComponent(name) + opts;
+    cap.textContent = name + ' → ' + smi;
+    tip.style.display = 'block';
+    var r = el.getBoundingClientRect();
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8));
+    var top = r.bottom + 6;
+    if (top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - 6);
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+  img.addEventListener('error', function () { tip.className = 'err'; });
+  document.addEventListener('mouseover', function (e) {
+    var el = e.target.closest ? e.target.closest('[data-smi]') : null;
+    if (el) show(el); else if (cur) hide();
+  });
+  window.addEventListener('scroll', hide, true);
+})();
+</script>
+</body>
+</html>
