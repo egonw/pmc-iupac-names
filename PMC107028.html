@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PMC107028</title>
+<style>
+:root { --bg: #ffffff; --fg: #1f2328; --tag: #1a5fb4; --pi: #8a6d00; --line: #d0d7de; --link: #0b57d0; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14171a; --fg: #d8dee4; --tag: #7cb7ff; --pi: #d4b44a; --line: #30363d; --link: #7cb7ff; }
+}
+body { background: var(--bg); color: var(--fg); margin: 0; font: 14px/1.5 system-ui, sans-serif; }
+header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 16px; }
+h1 { font-size: 16px; margin: 0 0 4px; display: flex; gap: 16px; align-items: baseline; }
+h1 a { font-size: 13px; font-weight: normal; color: var(--link); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; }
+.legend span { padding: 0 8px; border-radius: 3px; white-space: nowrap; }
+main { padding: 12px 16px 16px; }
+pre { margin: 0; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word; }
+.t { color: var(--tag); }
+.pi { color: var(--pi); }
+pre .g-new, pre .g-old, pre .smiles, pre .bad, pre .none { border-radius: 2px; }
+
+.g-new  { background: #1b7f3b; color: #fff; }
+.g-old  { background: #a8e6b8; color: #0b2a14; }
+.smiles { background: #ffe66d; color: #3a3000; }
+.bad    { background: #d93b3b; color: #fff; }
+.none   { background: #cfd4da; color: #1f2328; }
+@media (prefers-color-scheme: dark) {
+  .none { background: #4b5159; color: #e6edf3; }
+}
+
+#tip { position: fixed; z-index: 20; display: none; width: 300px; padding: 8px; border-radius: 6px;
+  background: #fff; color: #1f2328; border: 1px solid #8c959f; box-shadow: 0 4px 16px rgba(0,0,0,.3); pointer-events: none; }
+#tip img { display: block; width: 300px; height: 300px; object-fit: contain; background: #fff; }
+#tip .msg { display: none; width: 300px; height: 300px; align-items: center; justify-content: center; text-align: center; color: #6e7781; }
+#tip.err img { display: none; }
+#tip.err .msg { display: flex; }
+#tip .cap { margin-top: 6px; font: 12px/1.3 ui-monospace, Menlo, Consolas, monospace; word-break: break-all; }
+[data-smi] { cursor: help; }
+</style>
+</head>
+<body>
+<header>
+<h1>PMC107028 <a href="../index.html">&larr; index</a></h1>
+<div class="legend">
+<span class="g-new" title="valid IUPAC name, first time seen">IUPAC name (new) <b>0</b></span>
+<span class="g-old" title="valid IUPAC name, seen before">IUPAC name (cached) <b>8</b></span>
+<span class="smiles" title="the text itself is a valid SMILES">valid SMILES <b>1</b></span>
+<span class="bad" title="OPSIN gave a SMILES that CDK cannot read">invalid SMILES <b>0</b></span>
+<span class="none" title="Oscar entity that OPSIN could not convert to a SMILES">not converted <b>121</b></span>
+</div>
+</header>
+<main>
+<pre><span class="t">&lt;article article-type=&quot;research-article&quot; xml:lang=&quot;EN&quot; dtd-version=&quot;1.4&quot;&gt;</span>
+  <span class="t">&lt;front&gt;</span>
+    <span class="t">&lt;journal-meta&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;nlm-ta&quot;&gt;</span>BMC Musculoskelet Disord<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;pmc-domain-id&quot;&gt;</span>46<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;pmc-domain&quot;&gt;</span>bmcmudis<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-id journal-id-type=&quot;nlm-id&quot;&gt;</span>100968565<span class="t">&lt;/journal-id&gt;</span>
+      <span class="t">&lt;journal-title-group&gt;</span>
+        <span class="t">&lt;journal-title&gt;</span>BMC Musculoskeletal Disorders<span class="t">&lt;/journal-title&gt;</span>
+      <span class="t">&lt;/journal-title-group&gt;</span>
+      <span class="t">&lt;issn pub-type=&quot;epub&quot;&gt;</span>1471-2474<span class="t">&lt;/issn&gt;</span>
+      <span class="pi">&lt;?publisher_abbrev csg?&gt;</span>
+      <span class="t">&lt;publisher&gt;</span>
+        <span class="t">&lt;publisher-name&gt;</span>BMC<span class="t">&lt;/publisher-name&gt;</span>
+      <span class="t">&lt;/publisher&gt;</span>
+    <span class="t">&lt;/journal-meta&gt;</span>
+    <span class="t">&lt;article-meta&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcid&quot;&gt;</span>PMC107028<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcid-ver&quot;&gt;</span>PMC107028.1<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcaid&quot;&gt;</span>107028<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmcaiid&quot;&gt;</span>107028<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;pmid&quot;&gt;</span>11967146<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;doi&quot;&gt;</span>10.1186/1471-2474-3-11<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-id pub-id-type=&quot;publisher-id&quot;&gt;</span>1471-2474-3-11<span class="t">&lt;/article-id&gt;</span>
+      <span class="t">&lt;article-version article-version-type=&quot;pmc-version&quot;&gt;</span>1<span class="t">&lt;/article-version&gt;</span>
+      <span class="t">&lt;article-categories&gt;</span>
+        <span class="t">&lt;subj-group subj-group-type=&quot;heading&quot;&gt;</span>
+          <span class="t">&lt;subject&gt;</span>Research Article<span class="t">&lt;/subject&gt;</span>
+        <span class="t">&lt;/subj-group&gt;</span>
+      <span class="t">&lt;/article-categories&gt;</span>
+      <span class="t">&lt;title-group&gt;</span>
+        <span class="t">&lt;article-title&gt;</span>The impact of incident vertebral and non-vertebral fractures on health related quality of life in postmenopausal women<span class="t">&lt;/article-title&gt;</span>
+      <span class="t">&lt;/title-group&gt;</span>
+      <span class="t">&lt;contrib-group&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A1&quot; corresp=&quot;yes&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Adachi<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;JD&quot;&gt;</span>Jonathan D<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>jd.adachi@sympatico.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A2&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Ioannidis<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;G&quot;&gt;</span>George<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>g.ioannidis@sympatico.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A3&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Olszynski<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;WP&quot;&gt;</span>Wojciech P<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>olszynski@webster.sk.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A4&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Brown<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;JP&quot;&gt;</span>Jacques P<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I4&quot;&gt;</span>4<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>Jacques.Brown@crchul.ulaval.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A5&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Hanley<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;DA&quot;&gt;</span>David A<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I5&quot;&gt;</span>5<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>dahanley@ucalgary.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A6&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Sebaldt<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;RJ&quot;&gt;</span>Rolf J<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I6&quot;&gt;</span>6<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I7&quot;&gt;</span>7<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>sebaldt@mcmaster.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A7&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Petrie<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;A&quot;&gt;</span>Annie<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I6&quot;&gt;</span>6<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>petriea@mcmaster.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A8&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Tenenhouse<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;A&quot;&gt;</span>Alan<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>mcat@musica.mcgill.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A9&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Stephenson<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;GF&quot;&gt;</span>Gregory F<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I9&quot;&gt;</span>9<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>stephenson.gf@pg.com<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A10&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Papaioannou<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;A&quot;&gt;</span>Alexandra<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I10&quot;&gt;</span>10<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>PAPAIOANNOU@HHSC.CA<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A11&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Guyatt<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;GH&quot;&gt;</span>Gordon H<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I11&quot;&gt;</span>11<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>guyatt@mcmaster.ca<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+        <span class="t">&lt;contrib id=&quot;A12&quot; contrib-type=&quot;author&quot;&gt;</span>
+          <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+            <span class="t">&lt;surname&gt;</span>Goldsmith<span class="t">&lt;/surname&gt;</span>
+            <span class="t">&lt;given-names initials=&quot;CH&quot;&gt;</span>Charlie H<span class="t">&lt;/given-names&gt;</span>
+          <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;xref ref-type=&quot;aff&quot; rid=&quot;I11&quot;&gt;</span>11<span class="t">&lt;/xref&gt;</span>
+          <span class="t">&lt;email&gt;</span>goldsmit@fhs.csu.McMaster.CA<span class="t">&lt;/email&gt;</span>
+        <span class="t">&lt;/contrib&gt;</span>
+      <span class="t">&lt;/contrib-group&gt;</span>
+      <span class="t">&lt;aff id=&quot;I1&quot;&gt;</span><span class="t">&lt;label&gt;</span>1<span class="t">&lt;/label&gt;</span>Department of Medicine, St. Joseph's Hospital, McMaster University, Hamilton, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I2&quot;&gt;</span><span class="t">&lt;label&gt;</span>2<span class="t">&lt;/label&gt;</span>Charlton Medical Centre, Hamilton, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I3&quot;&gt;</span><span class="t">&lt;label&gt;</span>3<span class="t">&lt;/label&gt;</span>Department of Medicine, University of Saskatchewan, Saskatoon, Saskatchewan, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I4&quot;&gt;</span><span class="t">&lt;label&gt;</span>4<span class="t">&lt;/label&gt;</span>Department of Medicine, Laval University, Ste-Foy, Quebec, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I5&quot;&gt;</span><span class="t">&lt;label&gt;</span>5<span class="t">&lt;/label&gt;</span>Department of Medicine, University of Calgary, Calgary, Alberta, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I6&quot;&gt;</span><span class="t">&lt;label&gt;</span>6<span class="t">&lt;/label&gt;</span>Department of Medicine, McMaster University, Hamilton, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I7&quot;&gt;</span><span class="t">&lt;label&gt;</span>7<span class="t">&lt;/label&gt;</span>Centre for Evaluation of Medicines, St. Joseph's Hospital, Hamilton, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I8&quot;&gt;</span><span class="t">&lt;label&gt;</span>8<span class="t">&lt;/label&gt;</span>Department of Medicine, McGill University, Montreal, Quebec, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I9&quot;&gt;</span><span class="t">&lt;label&gt;</span>9<span class="t">&lt;/label&gt;</span>Procter &amp;amp; Gamble Pharmaceuticals, Toronto, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I10&quot;&gt;</span><span class="t">&lt;label&gt;</span>10<span class="t">&lt;/label&gt;</span>Department of Medicine, Hamilton Health Sciences, Hamilton, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;aff id=&quot;I11&quot;&gt;</span><span class="t">&lt;label&gt;</span>11<span class="t">&lt;/label&gt;</span>Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Ontario, Canada<span class="t">&lt;/aff&gt;</span>
+      <span class="t">&lt;pub-date pub-type=&quot;collection&quot;&gt;</span>
+        <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+      <span class="t">&lt;/pub-date&gt;</span>
+      <span class="t">&lt;pub-date pub-type=&quot;epub&quot;&gt;</span>
+        <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+        <span class="t">&lt;month&gt;</span>4<span class="t">&lt;/month&gt;</span>
+        <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+      <span class="t">&lt;/pub-date&gt;</span>
+      <span class="t">&lt;volume&gt;</span>3<span class="t">&lt;/volume&gt;</span>
+      <span class="t">&lt;issue-id pub-id-type=&quot;pmc-issue-id&quot;&gt;</span>1751<span class="t">&lt;/issue-id&gt;</span>
+      <span class="t">&lt;fpage&gt;</span>11<span class="t">&lt;/fpage&gt;</span>
+      <span class="t">&lt;lpage&gt;</span>11<span class="t">&lt;/lpage&gt;</span>
+      <span class="t">&lt;ext-link xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;uri&quot; xlink:href=&quot;http://www.biomedcentral.com/1471-2474/3/11&quot;/&gt;</span>
+      <span class="t">&lt;history&gt;</span>
+        <span class="t">&lt;date date-type=&quot;received&quot;&gt;</span>
+          <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+          <span class="t">&lt;month&gt;</span>11<span class="t">&lt;/month&gt;</span>
+          <span class="t">&lt;year&gt;</span>2001<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;date date-type=&quot;accepted&quot;&gt;</span>
+          <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+          <span class="t">&lt;month&gt;</span>4<span class="t">&lt;/month&gt;</span>
+          <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+        <span class="t">&lt;/date&gt;</span>
+      <span class="t">&lt;/history&gt;</span>
+      <span class="t">&lt;pub-history&gt;</span>
+        <span class="t">&lt;event event-type=&quot;pmc-release&quot;&gt;</span>
+          <span class="t">&lt;date&gt;</span>
+            <span class="t">&lt;day&gt;</span>22<span class="t">&lt;/day&gt;</span>
+            <span class="t">&lt;month&gt;</span>04<span class="t">&lt;/month&gt;</span>
+            <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;/event&gt;</span>
+        <span class="t">&lt;event event-type=&quot;pmc-live&quot;&gt;</span>
+          <span class="t">&lt;date&gt;</span>
+            <span class="t">&lt;day&gt;</span>09<span class="t">&lt;/day&gt;</span>
+            <span class="t">&lt;month&gt;</span>05<span class="t">&lt;/month&gt;</span>
+            <span class="t">&lt;year&gt;</span>2002<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;/event&gt;</span>
+        <span class="t">&lt;event event-type=&quot;pmc-last-change&quot;&gt;</span>
+          <span class="t">&lt;date iso-8601-date=&quot;2026-09-16 19:34:49.390&quot;&gt;</span>
+            <span class="t">&lt;day&gt;</span>16<span class="t">&lt;/day&gt;</span>
+            <span class="t">&lt;month&gt;</span>09<span class="t">&lt;/month&gt;</span>
+            <span class="t">&lt;year&gt;</span>2026<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;/date&gt;</span>
+        <span class="t">&lt;/event&gt;</span>
+      <span class="t">&lt;/pub-history&gt;</span>
+      <span class="t">&lt;permissions&gt;</span>
+        <span class="t">&lt;copyright-statement&gt;</span>Copyright Â© 2002 Adachi et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.<span class="t">&lt;/copyright-statement&gt;</span>
+        <span class="t">&lt;copyright-year&gt;</span>2002<span class="t">&lt;/copyright-year&gt;</span>
+        <span class="t">&lt;copyright-holder&gt;</span>Adachi et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.<span class="t">&lt;/copyright-holder&gt;</span>
+      <span class="t">&lt;/permissions&gt;</span>
+      <span class="t">&lt;self-uri xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; content-type=&quot;pmc-pdf&quot; xlink:href=&quot;1471-2474-3-11.pdf&quot;&gt;</span>
+        <span class="pi">&lt;?pdf-name 1471-2474-3-11.pdf?&gt;</span>
+        <span class="pi">&lt;?pdf-size 231961?&gt;</span>
+        <span class="pi">&lt;?pdf-md5 6dbad4764181abcfa260af139110303d?&gt;</span>
+        <span class="pi">&lt;?pdf-image-server-status NEVER_LOAD?&gt;</span>
+        <span class="pi">&lt;?pdf-cloudpmc-urn urn:app:b731/107028/6dbad4764181/1471-2474-3-11.pdf?&gt;</span>
+      <span class="t">&lt;/self-uri&gt;</span>
+      <span class="t">&lt;abstract&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Background<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Little empirical research has examined the multiple consequences of osteoporosis on quality of life.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec sec-type=&quot;methods&quot;&gt;</span>
+          <span class="t">&lt;title&gt;</span>Methods<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Health related quality of life (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>) was examined in relationship to incident fractures in 2009 postmenopausal women 50 years and older who were seen in consultation at our tertiary care, university teaching hospital-affiliated office and who were registered in the Canadian Database of Osteoporosis and Osteopenia (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span>) patients. Patients were divided into three study <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> according to incident fracture status: vertebral fractures, non-vertebral fractures and no fractures. Baseline assessments of anthropometric data, medical history, therapeutic <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">drug</span> use, and prevalent fracture status were obtained from <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> participants. The disease-targeted mini-Osteoporosis Quality of Life Questionnaire (mini-OQLQ) was used to measure <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Results<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Multiple regression analyses revealed that subjects who had experienced an incident vertebral fracture had lower <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> difference scores as compared with non-fractured participants in total score (-0.86; 95% confidence intervals (CI): -1.30, -0.43) and the symptoms (-0.76; 95% CI: -1.23, -0.30), physical functioning (-1.12; 95% CI: -1.57, -0.67), emotional functioning (-1.06; 95% CI: -1.44, -0.68), activities of daily living (-1.47; 95% CI: -1.97, -0.96), and leisure (-0.92; 95% CI: -1.37, -0.47) domains of the mini-OQLQ. Patients who experienced an incident non-vertebral fracture had lower <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> difference scores as compared with non-fractured participants in total score (-0.47; 95% CI: -0.70, -0.25), and the symptoms (-0.25; 95% CI: -0.49, -0.01), physical functioning (-0.39; 95% CI: -0.65, -0.14), emotional functioning (-0.97; 95% CI: -1.20, -0.75) and the activities of daily living (-0.47; 95% CI: -0.73, -0.21) domains.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Conclusion<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Quality of life decreased in patients who sustained incident vertebral and non-vertebral fractures.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;/abstract&gt;</span>
+      <span class="t">&lt;custom-meta-group&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-qastatus<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>0<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-live<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-embargo<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-status-released<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-open-access<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-olf<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-manuscript<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-legally-suppressed<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-has-pdf<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-has-supplement<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-pdf-only<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-suppress-copyright<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-is-real-version<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-is-scanned-article<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-preprint<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>no<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+        <span class="t">&lt;custom-meta&gt;</span>
+          <span class="t">&lt;meta-name&gt;</span>pmc-prop-in-epmc<span class="t">&lt;/meta-name&gt;</span>
+          <span class="t">&lt;meta-value&gt;</span>yes<span class="t">&lt;/meta-value&gt;</span>
+        <span class="t">&lt;/custom-meta&gt;</span>
+      <span class="t">&lt;/custom-meta-group&gt;</span>
+    <span class="t">&lt;/article-meta&gt;</span>
+  <span class="t">&lt;/front&gt;</span>
+  <span class="t">&lt;body&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Background<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>Osteoporosis, a skeletal disease characterized by low bone <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">mass</span> and an increased risk of bone fragility fractures, is a major health concern affecting a growing number of individuals worldwide [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span>]. Nearly 40% of Caucasian women age 50 years and older will experience at least one fracture of the spine, hip, or wrist during their lives [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>]. These fractures have physical, psychological and social consequences that can profoundly affect health related quality of life (HRQL). Patients with fractures may be unable to work, are limited in their social and recreational activities, and are emotionally distressed [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B4&quot;&gt;</span>4<span class="t">&lt;/xref&gt;</span>-<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>]. As such, women with fractures require extensive medical, and psychological care and assistance with activities of daily living.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>Quality of life measures have gained increasing attention as clinically relevant patient centered endpoints. Several instruments, both generic and disease targeted, have been created to examine health status [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B9&quot;&gt;</span>9<span class="t">&lt;/xref&gt;</span>-<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B14&quot;&gt;</span>14<span class="t">&lt;/xref&gt;</span>]. However, most instruments that evaluate quality of life have been primarily developed for experimental trials. As a consequence, these quality of life instruments are not easily incorporated into the real world of clinical practice since their length and the long time needed to complete them limit their use [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B15&quot;&gt;</span>15<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B16&quot;&gt;</span>16<span class="t">&lt;/xref&gt;</span>]. To enhance the usefulness of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> instruments in clinical practice, shorter questionnaires must be developed. Our study is the first to measure the influence of incident fractures on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> with a disease-targeted instrument that was specifically created for clinical use.<span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec sec-type=&quot;methods&quot;&gt;</span>
+      <span class="t">&lt;title&gt;</span>Methods<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Study Design<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;p&gt;</span>Data were obtained from the Canadian Database of Osteoporosis and Osteopenia (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span>) patients. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> consists of 8065 patients and involves 8 sites across Canada (Calgary, n = 20; Saskatoon, n = 357; Winnipeg; n = 4; Hamilton (2 sites), n = 6033; Montreal (2 sites), n = 1527; Quebec City, n = 124). This database is a prospective registry of patients designed to <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">capture</span> a comprehensive set of osteoporosis-related clinical data during the course of routine specialist care [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B17&quot;&gt;</span>17<span class="t">&lt;/xref&gt;</span>]. In particular, the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> contains electronically stored data regarding basic patient demographics, fracture history, gynecological history, past use of osteoporosis-related <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">drug</span> treatment, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">drug</span> side effects, past use of <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">corticosteroids</span> and other medications, dietary <span class="g-old" data-smi="[Ca]" data-name="calcium">calcium</span> intake, smoking habits, type and quantity of physical activities, fall history, past medical history and family history including fractures, a self administered osteoporosis <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> instrument, basic laboratory results, and bone density measurements. One database record, with over 400 data fields per patient, is generated for each patient at each clinical visit.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;p&gt;</span>For the current analysis, the database was searched for postmenopausal women 50 years of age and older who were seen at one Hamilton site and who were registered in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> from 1994 to 1999. During this time period, this location was the only <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> site that regularly administered the osteoporosis <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> instrument. At the Hamilton site, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> patients seen in the course of routine specialist care were entered in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span>. On average patients were seen annually and the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> instrument was administered at each clinical visit. Participants were grouped according to incident fracture status. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Group</span> I: patients who experienced clinically recognized incident vertebral fractures. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Group</span> II: patients who sustained incident non-vertebral fractures. Incident fractures were registered based on the patient's response to an item ("How many new fractures have you had since your last visit?") from the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> questionnaire. Incident vertebral fractures may or may not have been confirmed by x-ray. Incident non-vertebral fractures included the ankle, arm, clavicle, elbow, heel, hip, knee, leg, nose, pelvis, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">rib</span>, shoulder, sacrum, and wrist. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Group</span> III: patients who did not report an incident fracture.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;p&gt;</span>Patients with incident fractures were eligible for study entry if they completed at least a portion of the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> questionnaire prior to (pre assessment) and following their fracture (post assessment). Patients who did not report incident fractures also had to complete the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> questionnaire twice. The duration between pre and post <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> measurements was matched between the three <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span>.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;p&gt;</span>The mini-Osteoporosis Quality of Life Questionnaire (mini-OQLQ) was used to measure <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>. The instrument is self-administered but is reviewed by the specialist or a nurse clinician during each visit. The mini-<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">OQLQ</span> was derived from the original 30 item Osteoporosis Quality of Life Questionnaire (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">OQLQ</span>) [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B18&quot;&gt;</span>18<span class="t">&lt;/xref&gt;</span>] to enhance the instrument's usefulness in clinical practice. The mini-OQLQ includes the two items from the OQLQ with the highest impact in each of the five domains (symptoms, physical functioning, emotional functioning, activities of daily living, and leisure), for a total of 10 items (<span class="t">&lt;xref ref-type=&quot;supplementary-material&quot; rid=&quot;S1&quot;&gt;</span>Additional File<span class="t">&lt;/xref&gt;</span>). Each item is associated with a seven-point scale. The total score for the instrument can vary from 10 to 70, while the domain scores can vary from 2 to 14. To standardized <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> scores, the total and the domain scores were divided by the number of items that were used to generate the values. A standardized rating of 1 represents the worst possible function (extreme difficulties, constant fear, extreme distress) and a rating of 7 represents the best possible function (no difficulties, no fear, no distress). It has been suggested, from previous work, that changes within each domain score of approximately 0.5 represents a clinically important difference in quality of life [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B19&quot;&gt;</span>19<span class="t">&lt;/xref&gt;</span>,<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B20&quot;&gt;</span>20<span class="t">&lt;/xref&gt;</span>]. The mini-OQLQ instrument has been evaluated in osteoporotic women with back pain due to vertebral fractures and has been found to be reliable and valid both for measuring differences in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> between patients with osteoporosis and changes within these patients over time [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B21&quot;&gt;</span>21<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Statistical Analysis<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;p&gt;</span>Our primary objective was to determine the effect of vertebral and non-vertebral fractures on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>. Multiple regression analyses were performed to explain the relationship between incident fractures and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>. From these analyses, we determined regression coefficient estimates (which represent differences between pre and post <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> measurements for both fractured and non-fractured patients), as well as 95% confidence intervals (CI) of the difference scores for the mini-OQLQ. The independent variables entered in the models included <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span>; baseline mini-OQLQ score; <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> by baseline mini-OQLQ score interaction; number of years between pre and post administration of the mini-OQLQ; age; baseline height; baseline weight; prevalent vertebral and non-vertebral fracture status; number of prevalent vertebral and non-vertebral fractures; time spent exercising; dietary <span class="g-old" data-smi="[Ca]" data-name="calcium">calcium</span> intake; baseline bone <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">mineral</span> density of the lumbar spine and femoral neck; medications such as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">bisphosphonates</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">etidronate</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">alendronate</span>), <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">estrogen</span>, or others (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">calcitonin</span>, <span class="g-old" data-smi="[F-]" data-name="fluoride">fluoride</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">raloxifene</span>); and co-morbidities (including heart attack; stroke; breast, ovarian, cervical, uterine and colon cancer, and multiple myeloma; diabetes, epilepsy, arthritis, and thyroid disease). Regression models were selected based on Mallows <span class="smiles" title="valid SMILES">C(P)</span> statistic. Statistical significance was defined as p&amp;lt;0.05. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">All</span> analyses were preformed on a Dell personal computer using a <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">SAS</span>/<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">STAT</span> (version 7.0; <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">SAS</span> Institute <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Inc</span>., Cary, NC, USA) software package.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Results<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>Of the 5450 patients entered in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> from the Hamilton site, a total of 2009 postmenopausal women met the inclusion criteria of the study. The majority of patients were excluded because they were seen prior to 1994 (n = 1016), did not complete the mini-OQLQ twice (n = 2042), or were less than 50 years of age (n = 240). Among the women examined, 47 sustained incident vertebral and 149 developed incident non-vertebral fractures. The remaining 1813 women did not experience an incident fracture during the course of the study. The mean (standard deviation) time between baseline and follow-up administration of the mini-OQLQ for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> I, II and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">III</span> was 1.2 (0.5), 1.2 (0.4), and 1.2 (0.4) years, respectively. The mean (standard deviation) change in height between baseline and follow-up assessment was -1.4 (1.9), -0.3 (1.2), and -0.2 (1.4) cm, for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> I, II and III respectively. Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T1&quot;&gt;</span>1<span class="t">&lt;/xref&gt;</span> presents patient characteristics for <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> three <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span>.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;table-wrap position=&quot;float&quot; id=&quot;T1&quot;&gt;</span>
+        <span class="t">&lt;label&gt;</span>Table 1<span class="t">&lt;/label&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;p&gt;</span>Patient Characteristics<span class="t">&lt;sup&gt;</span>a<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;table frame=&quot;hsides&quot; rules=&quot;groups&quot;&gt;</span>
+          <span class="t">&lt;thead&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Incident VF Group (I)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Incident Non-VF Group (II)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>No Incident Fracture Group (III)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+          <span class="t">&lt;/thead&gt;</span>
+          <span class="t">&lt;tbody&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Number of patients<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>47<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>149<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1813<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Age-mean (SD)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>72.5 (8.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>68.5 (9.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>65.3 (8.8)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Weight-kg<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>62.2 (12.3)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>64.9 (12.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>64.8 (12.8)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Height â cm<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>154.4 (6.7)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>156.9 (6.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>157.4 (8.3)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Dietary Ca-g/d<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.8 (0.4)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.6 (0.3)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.6 (0.3)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Exercise-hours/week<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1.8 (2.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.8 (3.4)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2.9 (3.5)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Race-# (%)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âCaucasian<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>10 (21.3)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>29 (19.5)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>473 (26.1)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âOther<span class="t">&lt;sup&gt;</span>b<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1 (2.1)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0 (0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>26 (1.4)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âUnknown<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>36 (76.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>120 (80.5)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1314 (72.5)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>BMD-mean (SD)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âLS-g/cm<span class="t">&lt;sup&gt;</span>2<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.876 (0.131)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.941 (0.169)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.954 (0.148)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âFN-g/cm<span class="t">&lt;sup&gt;</span>2<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.687 (0.101)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.715 (0.120)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.734 (0.109)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Prevalent fractures â # (%)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âVF<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>24 (51.1)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>38 (25.5)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>326 (18.0)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âNon-VF<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>33 (70.2)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>98 (66.8)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>828 (45.7)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âMultiple VF (&amp;gt;1)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>16 (34.0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>17 (11.4)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>194 (10.7)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âMultiple Non-VF (&amp;gt;1)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>22 (46.8)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>59 (39.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>467 (25.8)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Concomitant diseases-# (%)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âHeart attack<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>7 (14.9)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>25 (16.8)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>262 (14.5)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âStroke<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3 (6.4)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3 (2.0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>58 (3.2)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âCancer<span class="t">&lt;sup&gt;</span>c<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5 (10.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>15 (10.0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>162 (8.9)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âDiabetes<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2 (4.3)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>6 (4.0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>58 (3.2)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âEpilepsy<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2 (4.3)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>2 (1.3)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>17 (0.9)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âArthritis<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>25 (53.2)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>78 (52.4)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1037 (57.2)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âThyroid disease<span class="t">&lt;sup&gt;</span>d<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>13 (27.7)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>36 (24.2)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>345 (19.0)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Medications-# (%)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+              <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âBisphosphonates<span class="t">&lt;sup&gt;</span>e<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>40 (85.1)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>109 (73.2)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1252 (69.1)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âEstrogen<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>16 (34.0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>50 (33.6)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>767 (42.3)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;tr&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>âOther medications<span class="t">&lt;sup&gt;</span>f<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4 (8.5)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3 (2.0)<span class="t">&lt;/td&gt;</span>
+              <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>42 (2.3)<span class="t">&lt;/td&gt;</span>
+            <span class="t">&lt;/tr&gt;</span>
+          <span class="t">&lt;/tbody&gt;</span>
+        <span class="t">&lt;/table&gt;</span>
+        <span class="t">&lt;table-wrap-foot&gt;</span>
+          <span class="t">&lt;p&gt;</span><span class="t">&lt;sup&gt;</span>a<span class="t">&lt;/sup&gt;</span> VF = vertebral fracture; Ca = <span class="g-old" data-smi="[Ca]" data-name="calcium">calcium</span>; SD = standard deviation; <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">BMD</span> = bone <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">mineral</span> density; LS = lumbar spine; FN = femoral neck; # = number of patients; % = percent of patients within each <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span>. <span class="t">&lt;sup&gt;</span>b<span class="t">&lt;/sup&gt;</span> others may have included one of the following Asian, Black, Aboriginal North American, Oriental, and Middle Eastern/North African White <span class="t">&lt;sup&gt;</span>c<span class="t">&lt;/sup&gt;</span>includes breast, ovarian, uterine or cervical, colon cancer; and multiple myeloma. <span class="t">&lt;sup&gt;</span>d<span class="t">&lt;/sup&gt;</span> includes hyper, hypo, nodular and other thyroid diseases. <span class="t">&lt;sup&gt;</span>e<span class="t">&lt;/sup&gt;</span> includes <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">alendronate</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">etidronate</span>. <span class="t">&lt;sup&gt;</span>f<span class="t">&lt;/sup&gt;</span> includes <span class="g-old" data-smi="[F-]" data-name="fluoride">fluoride</span>, <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">calcitonin</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">raloxifene</span>.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/table-wrap-foot&gt;</span>
+      <span class="t">&lt;/table-wrap&gt;</span>
+      <span class="t">&lt;sec&gt;</span>
+        <span class="t">&lt;title&gt;</span>Incident Fractures and HRQL<span class="t">&lt;/title&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Vertebral Fractures<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Since changes in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> were similar in patients with x-ray confirmed vertebral fractures versus those with only reported vertebral fractures (20 vs. 27 patients) based on the <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">CANDOO</span> questionnaire (not confirmed by x-ray), <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> incident vertebral fracture patients were grouped together. Unadjusted <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> standardized and difference scores were lower in patients in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> I as compared with those in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> III (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span> &amp;amp;<span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>). The difference scores between <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> remained statistic<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span>y significant after the analysis was adjusted for the other confounding variables for the total and all five domains of the mini-OQLQ (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>).<span class="t">&lt;/p&gt;</span>
+          <span class="t">&lt;table-wrap position=&quot;float&quot; id=&quot;T2&quot;&gt;</span>
+            <span class="t">&lt;label&gt;</span>Table 2<span class="t">&lt;/label&gt;</span>
+            <span class="t">&lt;caption&gt;</span>
+              <span class="t">&lt;p&gt;</span>Unadjusted Standardized Scores of the mini-OQLQ for Patients With and Without Incident Fractures<span class="t">&lt;sup&gt;</span>a<span class="t">&lt;/sup&gt;</span>.<span class="t">&lt;/p&gt;</span>
+            <span class="t">&lt;/caption&gt;</span>
+            <span class="t">&lt;table frame=&quot;hsides&quot; rules=&quot;groups&quot;&gt;</span>
+              <span class="t">&lt;thead&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Mini-OQLQ<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;3&quot; rowspan=&quot;1&quot;&gt;</span>Vertebral Fracture Group (I)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;3&quot; rowspan=&quot;1&quot;&gt;</span>Non-Vertebral Fracture Group (II)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;3&quot; rowspan=&quot;1&quot;&gt;</span>No Fracture Group (III)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Domains<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Baseline<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Follow-up<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>n<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Baseline<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Follow-up<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>n<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Baseline<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Follow-up<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>n<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+              <span class="t">&lt;/thead&gt;</span>
+              <span class="t">&lt;tbody&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Total Score<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.27 (1.83)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.54 (1.79)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>14<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.99 (1.37)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.64 (1.35)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>52<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.46 (1.43)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.49 (1.36)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>685<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Symptoms<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.98 (1.76)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.26 (1.65)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>44<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.82 (1.62)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.64 (1.51)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>136<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.08 (1.61)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.07 (1.62)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1711<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Physical Functioning<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.99 (2.11)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.26 (1.90)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>34<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.14 (1.68)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.83 (1.72)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>102<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.26 (1.77)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.31 (1.75)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1192<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Emotional Functioning<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.16 (2.13)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.72 (2.27)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>45<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.41 (1.69)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.54 (1.85)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>139<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.65 (1.55)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.67 (1.49)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1711<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Activities of Daily Living<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.25 (2.12)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>3.18 (1.91)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>30<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.24 (1.80)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.89 (1.84)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>105<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.34 (1.81)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.40 (1.75)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1260<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Leisure<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.10 (2.07)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>4.31 (2.20)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>26<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.42 (1.84)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>5.51 (1.78)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>75<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>6.01 (1.54)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>6.02 (1.51)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>1012<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+              <span class="t">&lt;/tbody&gt;</span>
+            <span class="t">&lt;/table&gt;</span>
+            <span class="t">&lt;table-wrap-foot&gt;</span>
+              <span class="t">&lt;p&gt;</span><span class="t">&lt;sup&gt;</span>a<span class="t">&lt;/sup&gt;</span> Only patients with both pre and post measurements were evaluated. Entries are means (standard deviation). n = sample <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">size</span>.<span class="t">&lt;/p&gt;</span>
+            <span class="t">&lt;/table-wrap-foot&gt;</span>
+          <span class="t">&lt;/table-wrap&gt;</span>
+          <span class="t">&lt;table-wrap position=&quot;float&quot; id=&quot;T3&quot;&gt;</span>
+            <span class="t">&lt;label&gt;</span>Table 3<span class="t">&lt;/label&gt;</span>
+            <span class="t">&lt;caption&gt;</span>
+              <span class="t">&lt;p&gt;</span>Unadjusted and Adjusted Regression Coefficient Estimates and 95% Confidence Intervals (CI) that Explain the mini-OQLQ for Patients With Incident Fractures Versus Those Without Incident Fractures<span class="t">&lt;sup&gt;</span>a<span class="t">&lt;/sup&gt;</span>.<span class="t">&lt;/p&gt;</span>
+            <span class="t">&lt;/caption&gt;</span>
+            <span class="t">&lt;table frame=&quot;hsides&quot; rules=&quot;groups&quot;&gt;</span>
+              <span class="t">&lt;thead&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Mini-OQLQ<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;4&quot; rowspan=&quot;1&quot;&gt;</span>Vertebral Fracture Group (I)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;4&quot; rowspan=&quot;1&quot;&gt;</span>Non-Vertebral Fracture Group (II)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Domains<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Estimates Unadjusted CI<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(n)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Adjusted Estimates CI<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(n)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Unadjusted Estimates CI<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(n)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Adjusted Estimates CI<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(n)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+              <span class="t">&lt;/thead&gt;</span>
+              <span class="t">&lt;tbody&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Total Score<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.77<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(699)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.86<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(673)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.38<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(737)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.47<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(711)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.22, -0.31<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.30, -0.43<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.62, -0.13<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.70, -0.25<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Symptoms<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.70<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1755)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.76<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1214)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.17<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1847)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.25<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1295)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.12, -0.29<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.23, -0.30<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.41, 0.07<span class="t">&lt;sup&gt;</span>c<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.49, -0.01<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Physical Functioning<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.76<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1226)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.12<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1113)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.35<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1294)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.39<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1181)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.20, -0.32<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.57, -0.67<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.62, -0.09<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.65, -0.14<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Emotional Functioning<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.46<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1756)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.06<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1581)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.90<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1850)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.97<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1669)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.85, -0.07<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.44, -0.68<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.13, -0.66<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.20, -0.75<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Activities of Daily Living<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.13<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1290)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.47<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1116)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.41<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1365)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.47<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1188)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.63, -0.63<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.97, -0.96<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.69, -0.14<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.73, -0.21<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>Leisure<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.81<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1038)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.92<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(991)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>0.08<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(1087)<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.05<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>(953)<span class="t">&lt;/td&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.29, -0.32<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-1.37, -0.47<span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.22, 0.37<span class="t">&lt;sup&gt;</span>c<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                  <span class="t">&lt;td align=&quot;left&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</span>-0.32, 0.23<span class="t">&lt;sup&gt;</span>c<span class="t">&lt;/sup&gt;</span><span class="t">&lt;/td&gt;</span>
+                  <span class="t">&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;/&gt;</span>
+                <span class="t">&lt;/tr&gt;</span>
+              <span class="t">&lt;/tbody&gt;</span>
+            <span class="t">&lt;/table&gt;</span>
+            <span class="t">&lt;table-wrap-foot&gt;</span>
+              <span class="t">&lt;p&gt;</span><span class="t">&lt;sup&gt;</span>a<span class="t">&lt;/sup&gt;</span>Regression coefficient estimates and 95% CI were calculated based on differences between the incident vertebral and incident non-vertebral fracture <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> versus the no fracture <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> (reference level: no incident fracture <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span>) between pre and post <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> measurements. The covariates included in the multiple regression analysis were <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span>; baseline mini-OQLQ score; <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> by baseline mini-OQLQ score interaction; number of years between pre and post administration of the mini-OQLQ; age; baseline height; baseline weight; change in height (post-pre); prevalent vertebral and non-vertebral fracture status; number of prevalent vertebral and non-vertebral fractures; time spent exercising (hours/week); dietary <span class="g-old" data-smi="[Ca]" data-name="calcium">calcium</span> intake (g/day); baseline bone <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">mineral</span> density of the lumbar spine and femoral neck; medications such as <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">bisphosphonates</span> (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">etidronate</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">alendronate</span>), <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">estrogen</span>, or others (<span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">calcitonin</span>, <span class="g-old" data-smi="[F-]" data-name="fluoride">fluoride</span> or <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">raloxifene</span>); and co-morbidities (including heart attack; stroke; breast, ovarian, cervical, uterine and colon cancer and multiple myeloma; diabetes, epilepsy, arthritis, and thyroid disease). <span class="t">&lt;sup&gt;</span>b<span class="t">&lt;/sup&gt;</span> (n) = sample <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">size</span>. <span class="t">&lt;sup&gt;</span>c<span class="t">&lt;/sup&gt;</span> indicates a non significant differences between <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> (the non-vertebral fracture <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> (II) versus the no fracture <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> (III)).<span class="t">&lt;/p&gt;</span>
+            <span class="t">&lt;/table-wrap-foot&gt;</span>
+          <span class="t">&lt;/table-wrap&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Non-Vertebral Fractures<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Unadjusted HRQL standardized and difference scores were lower in patients in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> II as compared with those in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span> III (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T2&quot;&gt;</span>2<span class="t">&lt;/xref&gt;</span> &amp;amp;<span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>) in most domains of the mini-OQLQ. After controlling for confounding variables, differences persisted in the total score, and the symptoms, physical functioning, emotional functioning and the activities of daily living domains (Table <span class="t">&lt;xref ref-type=&quot;table&quot; rid=&quot;T3&quot;&gt;</span>3<span class="t">&lt;/xref&gt;</span>).<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+        <span class="t">&lt;sec&gt;</span>
+          <span class="t">&lt;title&gt;</span>Other Patient factors and HRQL<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span><span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> was negatively associated with increased age, arthritis, and diabetes; whereas <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> was positively associated with <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">bisphosphonate</span> use and the amount of time spent exercising. However, while these patient factors were associated with <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>, the magnitude of the effects across the domains of the mini-OQLQ were variable and may or may not be clinically relevant (data not shown).<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/sec&gt;</span>
+      <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Discussion<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>The assessment of quality of life is needed to properly quantify disease burden. While clinicians and investigators may utilize a variety of questionnaires to assess their patients' <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>, their length and the time they take to complete may restrict their clinical usefulness. Short questionnaires minimize a patient's time and effort, and thus increase a patient's willingness to complete the questionnaire. The <span class="t">&lt;italic&gt;</span>Osteoporosis Quality of Life Study <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">Group</span><span class="t">&lt;/italic&gt;</span> developed the mini-OQLQ to facilitate questionnaire administration in clinical settings. The benefit of the mini-OQLQ is that it is efficient, it is self administered, and requires 2â3 minutes to complete. Data collected from the mini-OQLQ, provide a unique opportunity to determine the effect of incident fractures on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> in patients seen in ordinary clinical practice.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>The physical, emotional and psychological disabilities, and increased pain resulting from vertebral and non-vertebral fractures are outcomes of osteoporosis that can adversely influence <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>. After adjusting for confounding factors, our results show substantial impairment of quality of life in patients with incident vertebral fractures as compared with those without fractures. This was evident by the fact that <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> was significantly lower in the total score and <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> domains of the mini-OQLQ.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>Due to the small number of non-vertebral fractures, differences between fracture types were not examined. The mini-OQLQ was able to detect differences in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> between patients with incident non-vertebral and those without fractures. Statistically significant changes were seen in the total score and in the four domain scores of the mini-OQLQ. Nonetheless, the clinical relevance of these changes may be questioned. Based on these results, it is tempting to conclude that vertebral fractures have a greater impact on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> as compared with non-vertebral fractures. However, the mini-OQLQ was originally developed to measure the affect of vertebral fractures on quality of life and thus the instrument may be more responsive to this fracture type. As a consequence, evaluating changes in quality of life between vertebral and non-vertebral fractures is not recommended.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>It should be recognized that fractures are likely to be only one of the many medical conditions that influence <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>. Osteoporotic fractures generally affect individuals' later in life and a substantial proportion of these subjects may have clinically relevant co-morbidities. In this study, quality of life was lower in patients who had either arthritis or diabetes, exercised less, or did not use <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">bisphosphonates</span>. While these results are clinically interesting, the findings were based on secondary analyses and therefore they should be interpreted with caution. Further research will need to be conducted to determine the clinical importance of these patient factors on <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span>.<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>The strengths of this cohort study include the prospective examination of both incident vertebral and non-vertebral fractures. <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">All</span> participants in the study were "real world" patients who were seen for osteoporosis in tertiary care settings and thus represent a homogeneous <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">group</span>. Our analysis adjusted for factors that may influence quality of life such as co-morbidities, medications, activity levels and baseline functional status. Furthermore, since the mini-OQLQ is a disease-targeted instrument that measures characteristics relevant to osteoporosis, it may be more sensitive in detecting differences between <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span> as compared with generic <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> instruments. Nonetheless, our study is not without limitations. It is possible that other conditions such as abnormal spinal alignment, back muscle weakness, or inflexibility may have contributed to a reduced quality of life in these patients. Furthermore, not <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> spinal fractures were confirmed by x-ray. X-rays were performed only in patients with back pain. Therefore, subclinical vertebral fractures may have developed in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">all</span> <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">groups</span>. The presence of subclinical vertebral fracture has been documented to be associated with decreased activity [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B8&quot;&gt;</span>8<span class="t">&lt;/xref&gt;</span>]. As a consequence, the actual differences in <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">HRQL</span> scores may have been underestimated for those with documented vertebral fractures versus those without. In <span class="none" title="Oscar entity; OPSIN could not convert it to a SMILES">addition</span>, the presence of non-vertebral fractures were based on self-reports. This method of ascertainment may <span class="g-old" data-smi="[Pb]" data-name="lead">lead</span> to fracture misclassification [<span class="t">&lt;xref ref-type=&quot;bibr&quot; rid=&quot;B22&quot;&gt;</span>22<span class="t">&lt;/xref&gt;</span>].<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>In conclusion, this study demonstrates the detrimental impact of clinically recognized incident vertebral and non-vertebral fractures on quality of life in post-menopausal women. Despite improvements in the medical management of osteoporotic fractures, it is clear that fractured patients continue to experience decreased quality of life and that these deficits may often go unnoticed by clinicians. Thus, the challenge for the future is to develop treatment strategies to prevent and also reduce the pain associated with the fractures and to determine how patient satisfaction is impacted when quality of life issues are considered during care.<span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec&gt;</span>
+      <span class="t">&lt;title&gt;</span>Pre-publication history<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;p&gt;</span>The pre-publication history for this paper can be accessed here:<span class="t">&lt;/p&gt;</span>
+      <span class="t">&lt;p&gt;</span>
+        <span class="t">&lt;ext-link xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;uri&quot; xlink:href=&quot;http://www.biomedcentral.com/1471-2474/3/11/prepub&quot;/&gt;</span>
+      <span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+    <span class="t">&lt;sec sec-type=&quot;supplementary-material&quot;&gt;</span>
+      <span class="t">&lt;title&gt;</span>Supplementary Material<span class="t">&lt;/title&gt;</span>
+      <span class="t">&lt;supplementary-material content-type=&quot;local-data&quot; id=&quot;S1&quot; position=&quot;float&quot;&gt;</span>
+        <span class="t">&lt;caption&gt;</span>
+          <span class="t">&lt;title&gt;</span>Additional File<span class="t">&lt;/title&gt;</span>
+          <span class="t">&lt;p&gt;</span>Appendix 1, The questionnaire includes 10 items.  For each questions there are seven response options.<span class="t">&lt;/p&gt;</span>
+        <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;media xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;1471-2474-3-11-S1.doc&quot; mimetype=&quot;application&quot; mime-subtype=&quot;msword&quot; position=&quot;float&quot;&gt;</span>
+          <span class="pi">&lt;?suppdata-name 1471-2474-3-11-S1.doc?&gt;</span>
+          <span class="pi">&lt;?suppdata-size 26624?&gt;</span>
+          <span class="pi">&lt;?suppdata-md5 32b6512a1bf515b25b5f53741300266d?&gt;</span>
+          <span class="pi">&lt;?suppdata-image-server-status NEVER_LOAD?&gt;</span>
+          <span class="pi">&lt;?suppdata-mime-type application?&gt;</span>
+          <span class="pi">&lt;?suppdata-mime-sub-type msword?&gt;</span>
+          <span class="pi">&lt;?suppdata-cloudpmc-urn urn:app:b731/107028/32b6512a1bf5/1471-2474-3-11-S1.doc?&gt;</span>
+          <span class="t">&lt;caption&gt;</span>
+            <span class="t">&lt;p&gt;</span>Click here for file<span class="t">&lt;/p&gt;</span>
+          <span class="t">&lt;/caption&gt;</span>
+        <span class="t">&lt;/media&gt;</span>
+      <span class="t">&lt;/supplementary-material&gt;</span>
+    <span class="t">&lt;/sec&gt;</span>
+  <span class="t">&lt;/body&gt;</span>
+  <span class="t">&lt;back&gt;</span>
+    <span class="t">&lt;ref-list&gt;</span>
+      <span class="t">&lt;ref id=&quot;B1&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Papadimitropoulos<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>EA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Coyte<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>PC<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Josse<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RG<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Greenwood<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>CR<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Current and projected rates of hip fracture in Canada.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Can Med Assoc J<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1997<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>157<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1357<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1363<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>9371065<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmcid&quot;&gt;</span>PMC1228461<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B2&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Gullberg<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>B<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Johnell<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>O<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Kanis<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>World-wide projections for hip fracture.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Osteoporos Int<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1997<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>7<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>407<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>413<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>9425497<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1007/pl00004148<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B3&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Melton<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>LJ<span class="t">&lt;/given-names&gt;</span>
+              <span class="t">&lt;suffix&gt;</span>III<span class="t">&lt;/suffix&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Chrischilles<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>A<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cooper<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>C<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lane<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AW<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Riggs<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>BL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Perspective how many women have osteoporosis?<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Bone Miner Res<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1992<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>7<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>1005<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>1010<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>1414493<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1002/jbmr.5650070902<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B4&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lyles<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KW<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Gold<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DT<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Shipp<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>KM<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Association of osteoporotic vertebral compression fractures with impaired functional status.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Am J Med<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1993<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>94<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>595<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>601<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>8506884<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1016/0002-9343(93)90210-g<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B5&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Jensen<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GF<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Bagger<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>J<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Long-term social prognosis after hip fracture.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Acta Orthop Scand<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1982<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>53<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>97<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>101<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>6278817<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.3109/17453678208992185<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B6&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Gold<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DT<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The clinical impact of vertebral fractures: quality of life in women with osteoporosis.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Bone<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1996<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>18<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>S185<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>S189<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1016/8756-3282(95)00500-5<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>8777086<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B7&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cooper<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>C<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The crippling consequences of fractures and their impact on quality of life.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Am J Med<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1997<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>103<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>12S<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>19S<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>9302893<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1016/s0002-9343(97)90022-x<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B8&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Nevitt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>MC<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Thompson<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DE<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Black<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DM<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Effect of alendronate on limited-activity days and bed-disability days caused by back pain in postmenopausal women with existing vertebral fractures.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Arch Intern Med<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>2000<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>160<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>77<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>85<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>10632308<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1001/archinte.160.1.77<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B9&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Bergner<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>M<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Bobbitt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Carter<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>WB<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Gilson<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>BS<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The sickness impact profile: development and final revision of a health status measure.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Med Care<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1981<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>19<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>787<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>805<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>7278416<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1097/00005650-198108000-00001<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B10&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Brazier<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JE<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Harper<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>R<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Jones<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>NM<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Validating the SF-36 health survey questionnaire: new outcome measure for primary care.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Br Med J<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1992<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>305<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>160<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>164<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>1285753<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1136/bmj.305.6846.160<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmcid&quot;&gt;</span>PMC1883187<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B11&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cook<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Guyatt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Adachi<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Quality of life issues in women with vertebral fractures due to osteoporosis.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Arthritis Rheum<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1993<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>36<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>750<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>756<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>8507215<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1002/art.1780360603<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B12&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Helmes<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>E<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hodsman<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>A<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lazowski<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>D<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>A questionnaire to evaluate disability in osteoporotic patients with vertebral compression fractures.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Gerontol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1995<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>50A<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>91<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>98<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1093/gerona/50a.2.m91<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>7874595<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B13&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Silverman<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>SL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Mason<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>J<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Greenwald<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>M<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The Osteoporosis Assessment Questionnaire (OPAQ): a reliable and valid self-assessment measure of quality of life in osteoporosis.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Bone Miner Res<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1993<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>8<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>S343<span class="t">&lt;/fpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B14&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Lips<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>P<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cooper<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>C<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Agnusdei<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>D<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Quality of life as outcome in the treatment of osteoporosis; the development of a questionnaire for quality of life by the European Foundation for Osteoporosis.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Osteoporos Int<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1997<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>7<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>36<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>8<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>9102060<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1007/BF01623457<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B15&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Read<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Quinn<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hoefer<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>MA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Measuring overall health: an evaluation of three important approaches.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Chron Dis<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1987<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>40<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>7S<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>3597699<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1016/s0021-9681(87)80027-9<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B16&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Stewart<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AL<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Hays<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Ware<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JE<span class="t">&lt;/given-names&gt;</span>
+              <span class="t">&lt;suffix&gt;</span>Jr<span class="t">&lt;/suffix&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>The MOS short form general health survey: reliability and validity in a patient population.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Med Care<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1988<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>26<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>724<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>735<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>3393032<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1097/00005650-198807000-00007<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B17&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Sebaldt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>RJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Adachi<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Canadian database of osteoporosis and osteopenia patients (CANDOO).<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Canadian organization for the advancement of computers in healthcare proceedings<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1996<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>21<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>41<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>44<span class="t">&lt;/lpage&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B18&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;collab&gt;</span>Osteoporosis quality of life study group<span class="t">&lt;/collab&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Measuring quality of life in women with osteoporosis.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Osteoporos Int<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1997<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>7<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>478<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>487<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>9425507<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B19&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Guyatt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Walter<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>S<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Norman<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>G<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Measuring change over time: assessing the usefulness of evaluative instruments.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Chron Dis<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1987<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>40<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>171<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>178<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>3818871<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1016/0021-9681(87)90069-5<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B20&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Juniper<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>EF<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Guyatt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Willan<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>A<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Griffith<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>LE<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Determining a minimal important change in a disease-specific quality of life instrument.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>J Clin Epidemiol<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1994<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>47<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>81<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>87<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>8283197<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot; assigning-authority=&quot;pmc&quot;&gt;</span>10.1016/0895-4356(94)90036-1<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B21&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cook<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>DJ<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Guyatt<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>GH<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Adachi<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>JD<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Development and validation of the mini-Osteoporosis Quality of Life Questionnaire in osteoporotic women with back pain due to vertebral fractures. Osteoporosis quality of life study group.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>Osteoporos Int<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>1999<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>10<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>207<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>213<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>10525712<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1007/s001980050217<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+      <span class="t">&lt;ref id=&quot;B22&quot;&gt;</span>
+        <span class="t">&lt;element-citation publication-type=&quot;journal&quot;&gt;</span>
+          <span class="t">&lt;person-group person-group-type=&quot;author&quot;&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Ismail<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>AA<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>O'Neill<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>TW<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;name name-style=&quot;western&quot;&gt;</span>
+              <span class="t">&lt;surname&gt;</span>Cockerill<span class="t">&lt;/surname&gt;</span>
+              <span class="t">&lt;given-names&gt;</span>W<span class="t">&lt;/given-names&gt;</span>
+            <span class="t">&lt;/name&gt;</span>
+            <span class="t">&lt;etal/&gt;</span>
+          <span class="t">&lt;/person-group&gt;</span>
+          <span class="t">&lt;article-title&gt;</span>Validity of self-report of fractures: results from a prospective study in men and women across Europe.<span class="t">&lt;/article-title&gt;</span>
+          <span class="t">&lt;source&gt;</span>EPOS Study Group European Prospective Osteoporosis Study Group Osteoporos Int<span class="t">&lt;/source&gt;</span>
+          <span class="t">&lt;year&gt;</span>2000<span class="t">&lt;/year&gt;</span>
+          <span class="t">&lt;volume&gt;</span>11<span class="t">&lt;/volume&gt;</span>
+          <span class="t">&lt;fpage&gt;</span>248<span class="t">&lt;/fpage&gt;</span>
+          <span class="t">&lt;lpage&gt;</span>54<span class="t">&lt;/lpage&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;doi&quot;&gt;</span>10.1007/s001980050288<span class="t">&lt;/pub-id&gt;</span>
+          <span class="t">&lt;pub-id pub-id-type=&quot;pmid&quot;&gt;</span>10824241<span class="t">&lt;/pub-id&gt;</span>
+        <span class="t">&lt;/element-citation&gt;</span>
+      <span class="t">&lt;/ref&gt;</span>
+    <span class="t">&lt;/ref-list&gt;</span>
+  <span class="t">&lt;/back&gt;</span>
+<span class="t">&lt;/article&gt;</span>
+</pre>
+</main>
+<div id="tip"><img alt=""><div class="msg">Could not load the structure depiction</div><div class="cap"></div></div>
+<script>
+(function () {
+  var tip = document.getElementById('tip');
+  var img = tip.querySelector('img');
+  var cap = tip.querySelector('.cap');
+  var base = 'https://www.simolecule.com/cdkdepict/depict/bot/svg?smi=';
+  var opts = '&w=-1&h=-1&abbr=on&hdisp=S&annotate=none&r=0&mc=sn';
+  var cur = null;
+  function hide() { tip.style.display = 'none'; cur = null; }
+  function show(el) {
+    if (el === cur) return;
+    cur = el;
+    var smi = el.getAttribute('data-smi');
+    var name = el.getAttribute('data-name');
+    tip.className = '';
+    img.src = base + encodeURIComponent(smi) + '%20' + encodeURIComponent(name) + opts;
+    cap.textContent = name + ' → ' + smi;
+    tip.style.display = 'block';
+    var r = el.getBoundingClientRect();
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8));
+    var top = r.bottom + 6;
+    if (top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - 6);
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+  img.addEventListener('error', function () { tip.className = 'err'; });
+  document.addEventListener('mouseover', function (e) {
+    var el = e.target.closest ? e.target.closest('[data-smi]') : null;
+    if (el) show(el); else if (cur) hide();
+  });
+  window.addEventListener('scroll', hide, true);
+})();
+</script>
+</body>
+</html>
